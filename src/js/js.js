@@ -8,27 +8,27 @@ https://github.com/htmlpluscss/
 
 */
 
-(()=>{
+(() => {
 
 	"use strict";
 
-	window.DR = window.DR || {};
-	DR.resizeTimeout = null;
-	DR.windowWidthOLd = window.innerWidth;
+	window.MI = window.MI || {};
+	MI.resizeTimeout = null;
+	MI.windowWidthOLd = window.innerWidth;
 
-	window.addEventListener("resize",()=>{
+	window.addEventListener("resize", () => {
 
-		window.requestAnimationFrame(()=>{
+		window.requestAnimationFrame( () => {
 
-			if (!DR.resizeTimeout) {
+			if (!MI.resizeTimeout) {
 
-				DR.resizeTimeout = setTimeout(()=>{
+				MI.resizeTimeout = setTimeout( () => {
 
-					DR.resizeTimeout = null;
+					MI.resizeTimeout = null;
 
-					if(DR.windowWidthOLd !== window.innerWidth) {
+					if(MI.windowWidthOLd !== window.innerWidth) {
 
-						DR.windowWidthOLd = window.innerWidth;
+						MI.windowWidthOLd = window.innerWidth;
 
 						PubSub.publish('windowWidthResize');
 
@@ -42,33 +42,15 @@ https://github.com/htmlpluscss/
 
 	});
 
-	window.addEventListener("scroll",()=>{
-
-		window.requestAnimationFrame(()=>{
-
-			PubSub.publish('windowScroll');
-
-		});
-
-	});
-
-	window.addEventListener("DOMContentLoaded",()=>{
-
-		PubSub.publish('DOMContentLoaded');
-
-	});
-
-	window.addEventListener("load",()=>{
-
-		PubSub.publish('pageLoad');
-
-	});
+	window.addEventListener("scroll", () => window.requestAnimationFrame( () => PubSub.publish('windowScroll')));
+	window.addEventListener("DOMContentLoaded", () => PubSub.publish('DOMContentLoaded'));
+	window.addEventListener("load", () => PubSub.publish('pageLoad'));
 
 	// обработчик анимаций
-	DR.cssAnimation = (a)=>{var b,c,d=document.createElement("cssanimation");switch(a){case'animation':b={"animation":"animationend","OAnimation":"oAnimationEnd","MozAnimation":"animationend","WebkitAnimation":"webkitAnimationEnd"};break;case'transition':b={"transition":"transitionend","OTransition":"oTransitionEnd","MozTransition":"transitionend","WebkitTransition":"webkitTransitionEnd"}}for(c in b)if(d.style[c]!==undefined)return b[c]};
+	MI.cssAnimation = (a)=>{var b,c,d=document.createElement("cssanimation");switch(a){case'animation':b={"animation":"animationend","OAnimation":"oAnimationEnd","MozAnimation":"animationend","WebkitAnimation":"webkitAnimationEnd"};break;case'transition':b={"transition":"transitionend","OTransition":"oTransitionEnd","MozTransition":"transitionend","WebkitTransition":"webkitTransitionEnd"}}for(c in b)if(d.style[c]!==undefined)return b[c]};
 
 	// Determine if an element is in the visible viewport
-	DR.isInViewport = (element) => {
+	MI.isInViewport = (element) => {
 		var rect = element.getBoundingClientRect();
 		return (rect.top >= 0 && rect.bottom <= window.innerHeight);
 	};

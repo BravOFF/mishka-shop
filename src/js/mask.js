@@ -1,4 +1,4 @@
-DR.mask = function(elems){
+MI.mask = function(elems){
 
 	if(!elems.length) {
 
@@ -94,4 +94,4 @@ DR.mask = function(elems){
 
 };
 
-DR.mask(document.querySelectorAll('.inputmask'));
+MI.mask(document.querySelectorAll('.inputmask'));

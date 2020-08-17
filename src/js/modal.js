@@ -18,13 +18,13 @@
 
 		if(e.target.classList.contains('modal') || e.target.closest('.modal__close')){
 
-			DR.hideModal();
+			MI.hideModal();
 
 		}
 
 	});
 
-	DR.hideModal = () => {
+	MI.hideModal = () => {
 
 		modal.classList.add('visuallyhidden');
 
@@ -32,13 +32,13 @@
 		wrapper.style.top = 0;
 		window.scrollTo(0,windowScroll);
 
-		DR.activeModal = false;
+		MI.activeModal = false;
 
 	};
 
-	DR.modalShow = (selector)=>{
+	MI.modalShow = (selector)=>{
 
-		if(!DR.activeModal){
+		if(!MI.activeModal){
 
 			windowScroll = window.pageYOffset;
 
@@ -48,11 +48,11 @@
 
 		box.classList.toggle('is-narrow', selector === 'photo');
 
-		DR.activeModal = modal.querySelector('.modal__item--' + selector);
+		MI.activeModal = modal.querySelector('.modal__item--' + selector);
 
 		Array.prototype.forEach.call(items,(el)=>{
 
-			el.classList.toggle('visuallyhidden', el !== DR.activeModal);
+			el.classList.toggle('visuallyhidden', el !== MI.activeModal);
 
 		});
 
@@ -61,7 +61,7 @@
 		document.body.classList.add('modal-show');
 		window.scrollTo(0,0);
 
-		DR.activeModal.focus();
+		MI.activeModal.focus();
 
 	};
 
@@ -71,7 +71,7 @@
 
 			e.preventDefault();
 
-			DR.modalShow(el.getAttribute('data-modal'));
+			MI.modalShow(el.getAttribute('data-modal'));
 
 		});
 

@@ -1,0 +1,213 @@
+{% set nav = [
+
+	{
+		parent: "Смартфоны",
+		category: [
+			{
+				name : "Xiaomi Mi Mix 3"
+			},
+			{
+				name : "Xiaomi POCO F2 Pro"
+			},
+			{
+				name : "Xiaomi Mi 9",
+				list : [
+					"Xiaomi Mi9 SE",
+					"Xiaomi Mi 9T",
+					"Xiaomi Mi 9T Pro",
+					"Xiaomi Mi 9 Lite",
+					"Xiaomi Mi 9 Pro 5G"
+				]
+			},
+			{
+				name : "Xiaomi Mi A3"
+			},
+			{
+				name : "Xiaomi Black Shark 2 Pro"
+			},
+			{
+				name : "Xiaomi Redmi Go"
+			},
+			{
+				name : "Xiaomi Redmi 7A"
+			},
+			{
+				name : "Xiaomi Mi 10",
+				list : [
+					"Xiaomi Mi 10 Pro",
+					"Xiaomi Mi 10 Lite",
+					"Xiaomi Mi 10 Youth Edition",
+					"Xiaomi Mi 10 Ultra"
+				]
+			},
+			{
+				name : "Xiaomi Mi Mix Alpha"
+			},
+			{
+				name : "Xiaomi Redmi 8",
+				list : [
+					"Xiaomi Redmi 8A"
+				]
+			},
+			{
+				name : "Xiaomi Redmi Note 8",
+				list : [
+					"Xiaomi Redmi Note 8 Pro",
+					"Xiaomi Redmi Note 8T",
+					"Xiaomi Redmi K30 Pro",
+					"Xiaomi Redmi K30 Pro Zoom Edition"
+				]
+			},
+			{
+				name : "Xiaomi Redmi 9",
+				list : [
+					"Xiaomi Redmi 9C",
+					"Xiaomi Redmi 9A"
+				]
+			},
+			{
+				name : "Xiaomi Mi Note 10",
+				list : [
+					"Xiaomi Mi Note 10 Lite",
+					"Xiaomi Mi Note 10 Pro"
+				]
+			},
+			{
+				name : "Xiaomi Redmi Note 9",
+				list : [
+					"Xiaomi Redmi Note 9S",
+					"Xiaomi Redmi Note 9 Pro"
+				]
+			},
+			{
+				name : "Xiaomi Black Shark 3",
+				list : [
+					"Xiaomi Black Shark 3 Pro",
+					"Xiaomi Black Shark 3S",
+					"Xiaomi Redmi 10X 5G",
+					"Xiaomi Redmi 10X 5G Pro"
+				]
+			}
+		]
+	},
+	{
+		parent: "Ноутбуки, планшеты, периферия"
+	},
+	{
+		parent: "Браслеты и часы"
+	},
+	{
+		parent: "Фото и видео"
+	},
+	{
+		parent: "Зарядные устройства"
+	},
+	{
+		parent: "Аудио"
+	},
+	{
+		parent: "Одежда и обувь"
+	},
+	{
+		parent: "Транспорт"
+	},
+	{
+		parent: "Гаджеты и умный дом"
+	},
+	{
+		parent: "Телевизоры"
+	},
+	{
+		parent: "Аксессуары"
+	},
+	{
+		parent: "Уход и красота"
+	},
+	{
+		parent: "Чемоданы и сумки"
+	},
+	{
+		parent: "Бытовая техника"
+	},
+	{
+		parent: "Товары для детей"
+	},
+	{
+		parent: "Спорт и отдых"
+	},
+	{
+		parent: "Товары для дома"
+	}
+
+] %}
+
+<nav class="menu-catalog">
+
+	<ul class="menu-catalog__list">
+
+{% for item in nav %}
+
+		<li class="menu-catalog__item">
+
+			<a class="menu-catalog__head" href="/" title="{{ item.parent }}">
+				<span class="menu-catalog__head-ico">
+
+				</span>
+				<span class="menu-catalog__head-text">
+					{{ item.parent }}
+				</span>
+			</a>
+
+			<div class="menu-catalog__level2">
+
+{% for level2 in item.category %}
+
+				<div class="menu-catalog__level2-list">
+
+					<div class="menu-catalog__level2-item{% if level2.list %} menu-catalog__level2-item--parent{% endif %}">
+
+						<a class="menu-catalog__level2-link" href="/" title="{{ level2.name }}">
+							{{ level2.name }}
+						</a>
+
+
+
+					</div>
+
+{% if level2.list %}
+
+					<button type="button" class="button menu-catalog__level3-btn-back">
+						Назад
+					</button>
+
+					<ul class="menu-catalog__level3">
+
+{% for level3 in level2.list %}
+
+						<li class="menu-catalog__level3-item">
+
+							<a class="menu-catalog__level3-link" href="/" title="{{ level3 }}">
+								{{ level3 }}
+							</a>
+
+						</li>
+
+{% endfor %}
+
+					</ul>
+
+{% endif %}
+
+				</div>
+
+{% endfor %}
+
+			</div>
+
+		</li>
+
+{% endfor %}
+
+	</ul>
+
+</nav>

@@ -1,37 +1,32 @@
-((elems)=>{
+((footer) => {
 
 	"use strict";
 
-	if(!elems) {
-
-		return;
-
-	}
-
 	if ('IntersectionObserver' in window) {
 
-		Array.prototype.forEach.call(elems, (wrap) => {
+		const options = {
+			root: null,
+			rootMargin: '0px',
+			threshold: [.1]
+		};
 
-			const callback = (entries, observer) => {
+		const headerTop = document.querySelector('.header__top'),
+			  headerBottom = document.querySelector('.header__bottom');
 
-				Array.prototype.forEach.call(entries, (entry) => {
+		const callback = (entries, observer) =>
 
-					wrap.classList.toggle('is-scroll', entry.intersectionRatio < 1);
+			Array.prototype.forEach.call(entries, (entry) => {
 
-				});
+				document.body.classList.toggle('bg-footer', entry.intersectionRatio > 0.1 && window.pageYOffset > 0);
 
-			};
+				headerBottom.classList.toggle('is-hidden', entry.intersectionRatio > 0.1);
 
-			const observer = new IntersectionObserver(callback, {
-				root: wrap,
-				threshold: 1.0
 			});
 
-			observer.observe(wrap.querySelector('.scroll-observer__item'));
+		const observer = new IntersectionObserver(callback, options);
 
-		});
+		observer.observe(footer);
 
 	}
 
-
-})(document.querySelectorAll('.scroll-observer'));
+})(document.querySelector('.footer'));

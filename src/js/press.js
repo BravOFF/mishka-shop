@@ -1,4 +1,4 @@
-((items)=>{
+/*((items)=>{
 
 	"use strict";
 
@@ -24,4 +24,4 @@
 
 	});
 
-})(document.querySelectorAll('.press__link'));
+})(document.querySelectorAll('.press__link'));*/

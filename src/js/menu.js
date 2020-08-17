@@ -1,90 +1,43 @@
-(()=>{
+((menu) => {
 
 	"use strict";
 
-	// клик по гамбургеру
+	if(!menu) {
 
-	document.querySelector('.btn-menu-toggle').addEventListener('click', () => {
+		return;
 
-		if(DR.OpenMenu) {
+	}
 
-			document.body.classList.remove('menu-show');
+	const level1 = menu.querySelectorAll('.menu-catalog__head'),
+		  level2 = menu.querySelectorAll('.nav__level2-item--parent');
 
-			window.scrollTo(0,DR.windowScrollOld);
 
-			DR.OpenMenu = false;
+	// первый уровень
 
-		}
-		else {
+	Array.prototype.forEach.call(level1, (el) => {
 
-			DR.OpenMenu = true;
+		el.addEventListener('click', (e) => {
 
-			// записываем значение скролла страницы
-			DR.windowScrollOld = window.pageYOffset;
-			window.scrollTo(0,0);
+			e.preventDefault();
 
-			document.body.classList.add('menu-show');
-
-		}
-
-	});
-
-	// субменю
-
-	var navArrowOpenSubMenu = document.querySelectorAll('.menu__arrow');
-
-	Array.prototype.forEach.call(navArrowOpenSubMenu, function(btn){
-
-		btn.addEventListener('click', () => {
-
-			btn.classList.toggle('menu__arrow--open');
+			el.classList.toggle('is-open');
 
 		});
 
 	});
 
-	// fixed
+	// второй уровень
 
-	var ScrollTopPrev = window.pageYOffset;
+	Array.prototype.forEach.call(level2, (el) => {
 
-	PubSub.subscribe('windowScroll', ()=> {
+		el.querySelector('.nav__level2-link').addEventListener('click', (e) => {
 
-		if(!DR.menuOFF) {
+			e.preventDefault();
 
-			if(!DR.OpenMenu) {
+			el.classList.toggle('is-open');
 
-				var top = window.pageYOffset;
-
-				if(top <= 0) {
-
-					document.body.classList.remove('header-fixed');
-
-				}
-				else if(top > window.innerHeight){
-
-					document.body.classList.toggle('header-fixed', top <= ScrollTopPrev);
-
-				}
-
-				setTimeout(()=>{
-
-					ScrollTopPrev = top;
-
-				},100);
-
-			}
-
-		}
-		else {
-
-			setTimeout(()=>{
-
-				ScrollTopPrev = window.pageYOffset;
-
-			},100);
-
-		}
+		});
 
 	});
 
-})();
+})(document.querySelector('.menu-catalog'));

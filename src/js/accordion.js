@@ -43,11 +43,11 @@
 
 					// Menu off
 
-					DR.menuOFF = true;
+					MI.menuOFF = true;
 
 					setTimeout(()=>{
 
-						if(!DR.isInViewport(head[active])){
+						if(!MI.isInViewport(head[active])){
 
 							head[active].scrollIntoView({ behavior: 'smooth' });
 
@@ -55,7 +55,7 @@
 
 						setTimeout(()=>{
 
-							DR.menuOFF = false;
+							MI.menuOFF = false;
 
 						},3000);
 

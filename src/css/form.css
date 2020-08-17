@@ -78,8 +78,7 @@
 	border: 0;
 	border-radius: 0;
 
-	font: 300 20px/28px Spectral;
-	color: var(--text);
+	color: var(--color);
 
 	textarea& {
 
@@ -94,6 +93,7 @@
 
 		color: var(--text);
 		opacity: 1;
+		font-size: 12px;
 
 	}
 

@@ -31,7 +31,7 @@ body {
 	position: relative;
 	background-color: var(--bg);
 
-	background-image: url(/css/320.png);
+	background-image: url(/css/main.png);
 	background-position: center 0;
 	background-repeat: no-repeat;
 
@@ -82,8 +82,8 @@ svg {
 hr {
 
 	border: 0;
-	height: 2px;
-	background-color: var(--color);
+	height: 1px;
+	background-color: #3c3c3c;
 
 }
 
@@ -105,12 +105,14 @@ table {
 
 .h1 {
 
-	font: 700 32px/1.25 Spectral;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
 
 	@media ($tablet) {
 
-		font-size: 24px;
-		line-height: 1.33;
+		font-size: 36px;
+		line-height: 48px;
 
 	}
 
@@ -118,48 +120,18 @@ table {
 
 .h2 {
 
-	font: 700 24px/1.33 Spectral;
-
-	@media ($tablet) {
-
-		font-size: 20px;
-		line-height: 1.4;
-
-	}
-
-}
-
-.h3 {
-
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 1.6;
-
-	@media ($tablet) {
-
-		font-size: 16px;
-		line-height: 1.5;
-
-	}
-
-}
-
-.h4 {
-
+	font-weight: 700;
 	font-size: 16px;
-	font-weight: bold;
-	line-height: 1;
-	color: var(--color);
+	line-height: 24px;
 
 	@media ($tablet) {
 
-		font-size: 14px;
-		font-weight: bold;
+		font-size: 36px;
+		line-height: 48px;
 
 	}
 
 }
-
 
 
 main,
@@ -186,7 +158,7 @@ nav {
 
 	@media ($tablet) {
 
-		padding-top: 96px;
+		padding-top: 56px;
 
 	}
 
