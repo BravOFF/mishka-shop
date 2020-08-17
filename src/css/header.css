@@ -56,99 +56,100 @@
 
 }
 
-@media ($tablet) {
+.menu-show {
 
-	.menu-show {
+	.main,
+	.footer {
 
-		.main,
-		.footer {
-
-			display: none;
-
-		}
-
-		.wrapper {
-
-			padding: 0 !important;
-
-		}
-
-		.header {
-
-			position: relative !important;
-			box-shadow: none;
-
-		}
+		display: none;
 
 	}
 
-	.btn-menu-toggle {
+	.wrapper {
 
-		width: 32px;
-		height: 24px;
-		position: relative;
-		flex-shrink: 0;
-		top: 4px;
-		right: -4px;
+		padding: 0 !important;
+
+	}
+
+	.header {
+
+		position: relative !important;
+		box-shadow: none;
+
+	}
+
+}
+
+.btn-menu-toggle {
+
+	width: 32px;
+	height: 24px;
+	position: relative;
+	flex-shrink: 0;
+	top: 4px;
+	right: -4px;
+
+	position: absolute;
+	top: 36px;
+	right: 28px;
+
+	&::before,
+	&::after,
+	span {
 
 		position: absolute;
-		top: 36px;
-		right: 28px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 24px;
+		height: 2px;
+		transition: var(--transitionDefault);
+		background-color: var(--orange);
+		transform: rotate(0deg);
 
-		&__top,
-		&__center,
-		&__bottom {
+	}
 
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
+	&::before {
+
+		bottom: 14px;
+		content: '';
+
+	}
+
+	&::after {
+
+		top: 14px;
+		content: '';
+
+	}
+
+	.menu-show & {
+
+		span {
+
+			transform: rotate(225deg) scaleX(0);
+
+		}
+
+		&::before {
+
+			transform: rotate(225deg) scaleX(1.1);
 			bottom: 0;
-			margin: auto;
-			width: 24px;
-			height: 2px;
-			transition: .1s;
-			background-color: var(--text);
-			transform: rotate(0deg);
 
 		}
 
-		&__bottom {
+		&::after {
 
-			bottom: 14px;
-
-		}
-
-		&__top {
-
-			top: 14px;
-
-		}
-
-		.menu-show & {
-
-			&__center {
-
-				background-color: transparent;
-
-			}
-
-			&__bottom {
-
-				transform: rotate(225deg) scaleX(1.1);
-				bottom: 0;
-
-			}
-
-			&__top {
-
-				transform: rotate(-225deg) scaleX(1.1);
-				top: 0;
-
-			}
+			transform: rotate(-225deg) scaleX(1.1);
+			top: 0;
 
 		}
 
 	}
 
+}
+
+@media ($tablet) {
 }

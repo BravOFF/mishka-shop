@@ -104,12 +104,12 @@ gulp.task('css', function () {
 			.pipe(gulp.dest('build/css'))
 			.pipe(postcss([
 				autoprefixer({
-					browsers: 'Android >= 4.4'
+					browsers: 'Android >= 5'
 				})
 			]))
 			.pipe(csso())
 			.pipe(rename({suffix: ".min"}))
-			.pipe(gulp.dest('src/css'))
+//			.pipe(gulp.dest('src/css'))
 			.pipe(gulp.dest('build/css'))
 
 });
@@ -121,9 +121,9 @@ gulp.task('babel', function() {
 		.pipe(sourcemaps.init())
 		.pipe(concat('_js.js'))
 		.pipe(sourcemaps.write())
-		.pipe(babel({
+/*		.pipe(babel({
 			presets: ['@babel/env']
-		}))
+		}))*/
 		.pipe(minify({
 			preserveComments: "some",
 			ext : {
@@ -159,7 +159,7 @@ gulp.task('concat', function() {
 
 	return gulp.src(['build/js/_min.js','build/js/_js.min.js'])
 		.pipe(concat('scripts.min.js'))
-		.pipe(gulp.dest('src/js'))
+//		.pipe(gulp.dest('src/js'))
 		.pipe(gulp.dest('build/js'))
 
 });
