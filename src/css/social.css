@@ -4,37 +4,14 @@
 
 	&__item {
 
-		display: flex;
-		align-items: center;
-		margin-left: 32px;
-
-		&:first-child {
-
-			margin-left: 0;
-
-		}
+		margin-right: 8px;
 
 	}
 
 	&__link {
 
 		display: block;
-
-		svg {
-
-			fill: var(--text);
-
-		}
-
-		@media ($desktop) {
-
-			&:hover svg {
-
-				fill: var(--black);
-
-			}
-
-		}
+		border-radius: 50%;
 
 	}
 

@@ -1,4 +1,4 @@
-# MIshka-shop
+# Mishka-Shop
 [build](http://mi.wndrbase.com/)
 
 ## support browsers:

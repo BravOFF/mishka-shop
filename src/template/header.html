@@ -1,27 +1,79 @@
 	<header class="header">
 
-		<div class="header__flex">
+		<div class="header__top">
 
-			<a class="header__logo" href="/">
-				<img src="/img/logo.svg" alt="{{ site }}">
-			</a>
+			<div class="center">
 
-			<a class="header__tel" href="tel:+79057366464">
-				+7 (905) 736 64 64
-			</a>
+				<div class="header__wrap">
 
-			<button class="header__btn btn" type="button" data-modal="form">
-				Записаться на прием
-			</button>
+					<a class="header__logo" href="/">
+						<img src="/img/logo.svg" alt="{{ site }}">
+					</a>
 
-			<button class="button btn-menu-toggle visible-md" type="button" aria-label="открыть меню">
-				<span class="btn-menu-toggle__top"></span>
-				<span class="btn-menu-toggle__center"></span>
-				<span class="btn-menu-toggle__bottom"></span>
-			</button>
+					<button class="button btn-menu-toggle" type="button" aria-label="открыть меню"></button>
+
+				</div>
+
+{% include "template/menu.html" %}
+
+			</div>
 
 		</div>
 
-{% include "template/menu.html" %}
+		<div class="header__bootom">
+
+			<div class="center">
+
+				<div class="header__wrap">
+
+					<div class="header__user">
+
+						<div class="header__user-item">
+
+							<a href="/" title="На главную">
+
+							</a>
+
+						</div>
+
+						<div class="header__user-item">
+
+							<button class="button" type="button" aria-label="Указать регион">
+
+							</button>
+
+						</div>
+
+						<div class="header__user-item">
+
+							<button class="button" type="button" aria-label="Поиск по сайту">
+
+							</button>
+
+						</div>
+
+						<div class="header__user-item">
+
+							<a href="/" title="Корзина покупок">
+
+							</a>
+
+						</div>
+
+						<div class="header__user-item">
+
+							<a href="/" title="Личный кабинет">
+
+							</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
 
 	</header>

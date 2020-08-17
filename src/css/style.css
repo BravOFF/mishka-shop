@@ -2,17 +2,17 @@
 @import url(variables.css);
 @import url(media.css);
 @import url(default.css);
-@import url(form.css);
-/*
+
+/* @import url(form.css);
+
 @import url(modal.css);
 @import url(swiper.css);
-
+ */
 @import url(header.css);
 @import url(menu.css);
 @import url(footer.css);
-@import url(member.css);
 @import url(social.css);
-
+/*
 @import url(top-img.css);
 @import url(surgeries.css);
 

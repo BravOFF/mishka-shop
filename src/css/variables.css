@@ -1,14 +1,14 @@
 :root {
 
-	--text: #222;
-	--black: #232323;
+	--color: #000;
+	--text: #aaa;
+	--orange: #ff4a00;
 	--error: #f00;
-	--bg: #f5ecec;
+	--border: #aaa;
+	--bg: #fff;
+	--green: #0ead43;
+	--shadow: 0 5px 15px rgba(0,0,0,.5);
 
 }
 
-$desktop: (min-width: 1200px);
-$lgWidth: (max-width: 1300px);
-$mdWidth: (max-width: 1199px);
-$smWidth: (max-width: 767px);
-$xsWidth: (max-width: 359px);
+$tablet: (min-width: 764px);

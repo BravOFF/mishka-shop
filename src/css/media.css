@@ -1,56 +1,28 @@
-.visible-md,
-.visible-sm,
-.visible-xs {
+.visible-tablet {
 
 	display: none;
 
 }
 
-.visible-lg {
-
-	display: block;
-
-}
-
-
 .center {
 
 	margin: 0 auto;
-	width: 1280px;
+	width: 960px;
 	max-width: 100%;
 	position: relative;
+	padding: 0 20px;
 
 }
 
-@media (max-width: 1500px) {
+@media ($tablet) {
 
-
-}
-
-@media ($desktop) {
-
-
-}
-
-@media ($lgWidth) {
-
-	.center {
-
-		width: 1152px;
-
-	}
-
-}
-
-@media ($mdWidth) {
-
-	.hidden-md {
+	.hidden-tablet {
 
 		display: none !important;
 
 	}
 
-	.visible-md {
+	.visible-tablet {
 
 		display: block;
 
@@ -58,45 +30,7 @@
 
 	.center {
 
-		width: 640px;
-
-	}
-
-}
-
-@media ($smWidth) {
-
-	.hidden-sm {
-
-		display: none !important;
-
-	}
-
-	.visible-sm {
-
-		display: block;
-
-	}
-
-	.center {
-
-		padding: 0 16px;
-
-	}
-
-}
-
-@media ($xsWidth) {
-
-	.hidden-xs {
-
-		display: none !important;
-
-	}
-
-	.visible-xs {
-
-		display: block;
+		padding: 0 15px;
 
 	}
 
