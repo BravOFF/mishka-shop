@@ -1,3 +1,14 @@
+.tab-swiper {
+
+	&__item:not(.is-active) {
+
+		overflow: hidden;
+		height: 0;
+
+	}
+
+}
+
 .card-swiper {
 
 	margin: 32px 0;
@@ -63,6 +74,11 @@
 	&__list {
 
 		display: flex;
+
+	}
+
+	.swiper-container {
+
 		overflow: visible;
 
 	}
@@ -70,7 +86,7 @@
 	&__item {
 
 		margin-right: 15px;
-		width: 218px;
+		width: 218px !important;
 		box-shadow: var(--shadow);
 		flex-shrink: 0;
 

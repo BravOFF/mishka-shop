@@ -8,23 +8,22 @@
 
 	}
 
-	var swiperInit = window.Swiper;
+	let swiperInit = window.Swiper;
 
-	Array.prototype.forEach.call(swiperContainer, (swipe)=>{
+	Array.prototype.forEach.call(swiperContainer, (swipe) => {
 
-		var mySwipe = null,
+		let mySwipe = null,
 			toggleSwipe = null,
-			resetSwipe = null,
-			swipeControls = document.createElement('div'),
-			swipeNav = document.createElement('div'),
-			swipeBtns = document.createElement('div'),
-			swipeNext = document.createElement('button'),
-			swipePrev = document.createElement('button'),
-			items = swipe.querySelectorAll('.swiper-slide'),
-			count = items.length,
-			review = swipe.classList.contains('swiper-container--review'),
-			surgery = swipe.classList.contains('swiper-container--surgery'),
-			slidesPerViewAuto = swipe.classList.contains('swiper-container--slides-per-view-auto');
+			resetSwipe = null;
+
+		const swipeControls = document.createElement('div'),
+			  swipeNav = document.createElement('div'),
+			  swipeBtns = document.createElement('div'),
+			  swipeNext = document.createElement('button'),
+			  swipePrev = document.createElement('button'),
+			  items = swipe.querySelectorAll('.swiper-slide'),
+			  count = items.length,
+			  card = swipe.classList.contains('swiper-container--card');
 
 		swipeNav.className = 'swiper-pagination';
 		swipeControls.className = 'swiper-controls';
@@ -52,105 +51,36 @@
 			}
 
 			swipeNav.classList.add('hide');
+			swipeControls.classList.add('hide');
 
 		}
 
 		resetSwipe();
 
-		if (review) {
+		if (card) {
 
-			swipePrev.classList.add('swiper-button-disabled');
-
-			toggleSwipe = function() {
+			toggleSwipe = () => {
 
 				toggleSwipe = false;
 
 				new Swiper(swipe, {
-					loop: false,
-					autoHeight: true,
-					spaceBetween: 32,
-					slidesPerView: 4,
-					slidesPerGroup: 1,
-					navigation: {
-						nextEl: swipeNext,
-						prevEl: swipePrev
-					},
-					breakpoints: {
-						320: {
-							slidesPerView: 1,
-							slidesPerGroup: 1
-						},
-						768: {
-							slidesPerView: 2,
-							slidesPerGroup: 2
-						},
-						1200: {
-							slidesPerView: 4,
-							slidesPerGroup: 1
-						}
-					}
+					loop: true,
+					slidesPerView: 'auto'
 				});
 
 			}
 
 		}
 
-		if (slidesPerViewAuto) {
+		PubSub.subscribe('windowWidthResize', function(){
 
-			swipePrev.classList.add('swiper-button-disabled');
+			if (window.Swiper && toggleSwipe) {
 
-			toggleSwipe = function() {
-
-				resetSwipe();
-
-				mySwipe = new Swiper(swipe, {
-					loop: false,
-					simulateTouch: false,
-					updateOnImagesReady: true,
-					slidesPerView: 'auto',
-					navigation: {
-						nextEl: swipeNext,
-						prevEl: swipePrev
-					},
-					on: {
-						imagesReady: function(){
-
-							swipe.classList.toggle('swiper-container--off', swipe.swiper.virtualSize === swipe.swiper.width);
-
-						},
-						resize: function(){
-
-							swipe.classList.toggle('swiper-container--off', swipe.swiper.virtualSize === swipe.swiper.width);
-
-						}
-					}
-				});
+				toggleSwipe();
 
 			}
 
-		}
-
-		if (surgery) {
-
-			swipePrev.classList.add('swiper-button-disabled');
-
-			toggleSwipe = function() {
-
-				resetSwipe();
-
-				mySwipe = new Swiper(swipe, {
-					loop: false,
-					simulateTouch: false,
-					updateOnImagesReady: true,
-					navigation: {
-						nextEl: swipeNext,
-						prevEl: swipePrev
-					}
-				});
-
-			}
-
-		}
+		});
 
 		if(window.Swiper && toggleSwipe) {
 
@@ -167,7 +97,7 @@
 
 			swiperInit = true;
 
-			var script = document.createElement('script');
+			const script = document.createElement('script');
 
 			script.type = 'text/javascript';
 			script.async = true;
@@ -175,7 +105,11 @@
 
 			script.onload = () => PubSub.publish('swiperJsLoad');
 
-			document.head.appendChild(script);
+		//	setTimeout(() => {
+
+				document.head.appendChild(script);
+
+		//	}, window.pageYOffset === 0 ? 8000 : 100);
 
 		}
 
