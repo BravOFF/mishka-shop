@@ -36,24 +36,60 @@
 .btn {
 
 	display: block;
-	text-align: center;
-	vertical-align: middle;
-	position: relative;
-	white-space: nowrap;
-
+/*
 	padding: 0 30px;
-	letter-spacing: 1px;
-	min-width: 280px;
 
 	height: 64px;
-	font-size: 16px;
-	line-height: 60px;
-	font-weight: 700;
-	text-align: center;
-	color: #fff;
-	border-radius: 32px;
-	background-color: var(--text);
-	border: solid 2px var(--text);
+font-size: 16px;
+line-height: 60px;
+font-weight: 700;
+color: #fff;
+border-radius: 32px;
+background-color: var(--text);
+border: solid 2px var(--text);
+ */
+	&--tab {
+
+		background-color: #f6f6f6;
+		border-radius: 6px;
+		color: #c9c9c9;
+		font-weight: 300;
+		font-size: 12px;
+		height: 28px;
+		min-width: 115px;
+		line-height: 28px;
+		padding: 0 20px;
+
+		&.is-active {
+
+			color: var(--color);
+
+		}
+
+	}
+
+	&--buy {
+
+		background-color: var(--orange);
+		border-radius: 5px;
+		height: 36px;
+		width: 40px;
+		padding: 0;
+
+		svg {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			fill: #fff;
+
+		}
+
+	}
+
 
 }
 

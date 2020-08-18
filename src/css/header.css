@@ -7,7 +7,7 @@
 		left: 0;
 		right: 0;
 		z-index: 9;
-		/* background-color: var(--bg); */
+		background-color: var(--bg);
 
 	}
 
@@ -45,7 +45,7 @@
 		position: relative;
 
 		width: 210px;
-		height: 40px;
+		height: 32px;
 
 		@media ($tablet) {
 
@@ -55,6 +55,8 @@
 		img {
 
 			width: 100%;
+			top: -8px;
+			left: -12px;
 
 		}
 
@@ -143,24 +145,24 @@
 
 	}
 
-	.menu-show & {
+	.menu-open & {
 
 		span {
 
-			transform: rotate(225deg) scaleX(0);
+			transform: scaleX(0);
 
 		}
 
 		&::before {
 
-			transform: rotate(225deg) scaleX(1.1);
+			transform: rotate(225deg);
 			bottom: 0;
 
 		}
 
 		&::after {
 
-			transform: rotate(-225deg) scaleX(1.1);
+			transform: rotate(-225deg);
 			top: 0;
 
 		}

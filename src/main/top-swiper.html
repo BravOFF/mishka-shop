@@ -1,6 +1,6 @@
-	<section class="product-swiper">
+	<section class="card-swiper">
 
-		<div class="product-swiper__title">
+		<div class="card-swiper__title">
 
 			<h2 class="h1">
 				Популярные предложения
@@ -8,68 +8,83 @@
 
 		</div>
 
-		<div class="product-swiper__tab">
+		<div class="card-swiper__tab">
 
-			<button class="btn btn--tab is-active">
-				Смартфоны
-			</button>
+			<div class="card-swiper__tab-item">
 
-			<button class="btn btn--tab">
-				Ноутбуки
-			</button>
+				<button class="btn btn--tab is-active">
+					Смартфоны
+				</button>
 
-			<button class="btn btn--tab">
-				Транспорт
-			</button>
+			</div>
+
+			<div class="card-swiper__tab-item">
+
+				<button class="btn btn--tab">
+					Ноутбуки
+				</button>
+
+			</div>
+
+			<div class="card-swiper__tab-item">
+
+				<button class="btn btn--tab">
+					Транспорт
+				</button>
+
+			</div>
 
 		</div>
 
-		<div class="product-swiper__wrap">
+		<div class="card-swiper__wrap">
 
-			<ul class="product-swiper__list">
+			<ul class="card-swiper__list">
 
 {% for item in [1,2,3,4,5] %}
 
-				<li class="product-swiper__item">
+				<li class="card-swiper__item">
 
-					<div class="product-preview">
+					<div class="card-preview">
 
-						<p class="product-preview__sku">
+						<p class="card-preview__sku">
 							Артикул: 113937
 						</p>
 
-						<a href="/" class="product-preview__img">
+						<a href="/" class="card-preview__img">
 
 							<picture>
 
-								<source srcset="/img/billboard/330x204.webp 1x, /img/billboard/660x408.webp 2x" type="image/webp">
-								<source srcset="/img/billboard/330x204.jpg 1x, /img/billboard/660x408.jpg 2x"">
+								<source srcset="/img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--120x120.webp 1x, /img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--240x240.webp 2x" type="image/webp">
+								<source srcset="/img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--120x120.jpg 1x, /img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--240x240.jpg 2x">
 
-								<img src="/img/billboard/724x720.jpg" alt="" loading="lazy" width="330" height="204">
+								<img src="/img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--120x120.jpg" alt="" loading="lazy" width="120" height="120">
 
 							</picture>
 
 						</a>
 
-						<div class="product-preview__">
+						<div class="card-preview__available">
 							В наличии
 						</div>
 
-						<a href="/" class="product-preview__name">
+						<a href="/" class="card-preview__name">
 							Xiaomi Redmi Note 7 6/64GB Twilight Gold
 						</a>
 
-						<form action="/" class="product-preview__order">
+						<form action="/" class="card-preview__order">
 
-							<div class="product-preview__stars">
+							<p class="card-preview__stars">
+								<span class="card-preview__stars-value card-preview__stars-value--90">
+									оценка 4.5 из 5
+								</span>
+							</p>
 
-							</div>
-
-							<div class="product-preview__price h1">
+							<p class="card-preview__price h1">
+								<span class="visuallyhidden">Цена</span>
 								11 599 руб.
-							</div>
+							</p>
 
-							<button class="btn btn--buy" aria-label="купить">
+							<button class="card-preview__buy btn btn--buy" aria-label="купить">
 								<svg width="22" height="20" viewBox="0 0 22 20">
 									<path d="M7.09 12.89h11.69a.64.64 0 00.62-.47L22 3.4a.64.64 0 00-.62-.82H5.6L5.14.5a.64.64 0 00-.63-.5H.64a.64.64 0 100 1.29H4l2.32 10.47a1.93 1.93 0 00.77 3.71h11.69a.64.64 0 000-1.29H7.09a.64.64 0 010-1.29zm13.41-9l-2.21 7.71H7.61L5.89 3.87z"/>
 									<path d="M6.45 17.4a1.93 1.93 0 101.93-1.93 1.94 1.94 0 00-1.93 1.93zm1.93-.64a.64.64 0 11-.64.64.65.65 0 01.64-.64zM15.55 17.4a1.93 1.93 0 101.93-1.93 1.94 1.94 0 00-1.93 1.93zm1.93-.64a.64.64 0 11-.64.64.65.65 0 01.65-.64z"/>

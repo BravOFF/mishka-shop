@@ -17,8 +17,9 @@
 @import url(search-shop.css);
 @import url(billboard.css);
 @import url(menu-catalog.css);
-@import url(product-swiper.css);
-@import url(product-preview.css);
+@import url(card-swiper.css);
+@import url(card-preview.css);
+@import url(address-shops.css);
 
 /*
 @import url(surgeries.css);
@@ -26,7 +27,6 @@
 @import url(review.css);
 @import url(readme.css);
 
-@import url(education-qualification.css);
 
 @import url(contact.css);
 

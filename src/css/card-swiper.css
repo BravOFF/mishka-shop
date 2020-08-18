@@ -1,0 +1,85 @@
+.card-swiper {
+
+	margin: 32px 0;
+
+	&__title {
+
+		margin-bottom: 16px;
+
+	}
+
+	&__tab {
+
+		overflow-x: auto;
+		display: flex;
+		padding: 0 15px 10px;
+		margin: 0 -15px 12px;
+
+		&-item {
+
+			padding-right: 10px;
+
+		}
+
+		@media ($tablet) {
+
+			padding: 0 20px 10px;
+			margin: 0 -20px;
+
+		}
+
+		&::-webkit-scrollbar {
+
+			height: 6px;
+			border-radius: 3px;
+			background-color: #f5f6f8;
+
+		}
+
+		&::-webkit-scrollbar-thumb {
+
+			border-radius: 3px;
+			background-color: var(--text);
+
+		}
+
+	}
+
+	&__wrap {
+
+		margin: -15px;
+		padding: 15px;
+		overflow: hidden;
+
+		@media ($tablet) {
+
+			margin: -20px;
+			padding: 20px;
+
+		}
+
+	}
+
+	&__list {
+
+		display: flex;
+		overflow: visible;
+
+	}
+
+	&__item {
+
+		margin-right: 15px;
+		width: 218px;
+		box-shadow: var(--shadow);
+		flex-shrink: 0;
+
+		@media ($tablet) {
+
+			margin-right: 20px;
+
+		}
+
+	}
+
+}
