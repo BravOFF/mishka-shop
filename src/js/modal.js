@@ -26,8 +26,6 @@
 
 	MI.hideModal = () => {
 
-		modal.classList.add('visuallyhidden');
-
 		document.body.classList.remove('modal-show');
 		wrapper.style.top = 0;
 		window.scrollTo(0,windowScroll);
@@ -36,7 +34,7 @@
 
 	};
 
-	MI.modalShow = (selector)=>{
+	MI.modalShow = (selector) => {
 
 		if(!MI.activeModal){
 
@@ -46,17 +44,9 @@
 
 		}
 
-		box.classList.toggle('is-narrow', selector === 'photo');
-
 		MI.activeModal = modal.querySelector('.modal__item--' + selector);
 
-		Array.prototype.forEach.call(items,(el)=>{
-
-			el.classList.toggle('visuallyhidden', el !== MI.activeModal);
-
-		});
-
-		modal.classList.remove('visuallyhidden');
+		Array.prototype.forEach.call(items, (el) => el.classList.toggle('visuallyhidden', el !== MI.activeModal));
 
 		document.body.classList.add('modal-show');
 		window.scrollTo(0,0);
@@ -65,16 +55,6 @@
 
 	};
 
-	Array.prototype.forEach.call(btns,(el)=>{
-
-		el.addEventListener('click',(e)=>{
-
-			e.preventDefault();
-
-			MI.modalShow(el.getAttribute('data-modal'));
-
-		});
-
-	});
+	Array.prototype.forEach.call(btns, (el) => el.addEventListener('click', () => MI.modalShow(el.getAttribute('data-modal'))));
 
 })(document.querySelector('.modal'));

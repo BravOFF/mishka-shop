@@ -1,4 +1,4 @@
-((menu) => {
+/*((menu) => {
 
 	"use strict";
 
@@ -43,7 +43,7 @@
 	});
 
 })(document.querySelector('.menu'));
-
+*/
 
 // меню каталога
 

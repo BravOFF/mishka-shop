@@ -72,15 +72,17 @@
 
 			outline:1px solid red;
 			display: flex;
+			justify-content: center;
 			align-items: center;
 			width: 30px;
 			height: 30px;
+			fill: var(--text);
 
 		}
 
 	}
 
-}
+}/*
 
 .menu-show {
 
@@ -104,7 +106,7 @@
 
 	}
 
-}
+} */
 
 .btn-menu-toggle {
 
@@ -144,7 +146,7 @@
 		content: '';
 
 	}
-
+/*
 	.menu-open & {
 
 		span {
@@ -167,7 +169,7 @@
 
 		}
 
-	}
+	} */
 
 }
 
