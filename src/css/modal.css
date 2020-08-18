@@ -6,12 +6,12 @@
 	z-index: 10;
 	display: none;
 	width: 100%;
-	justify-content: flex-end;
-	align-items: flex-start;
+	justify-content: center;
+	align-items: center;
 
 	&__box {
 
-		width: 285px;
+		width: 320px;
 		max-width: 100%;
 		position: relative;
 		padding: 25px;

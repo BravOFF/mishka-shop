@@ -105,11 +105,11 @@
 
 			script.onload = () => PubSub.publish('swiperJsLoad');
 
-		//	setTimeout(() => {
+			setTimeout(() => {
 
 				document.head.appendChild(script);
 
-		//	}, window.pageYOffset === 0 ? 8000 : 100);
+			}, window.pageYOffset === 0 ? 5000 : 100);
 
 		}
 
