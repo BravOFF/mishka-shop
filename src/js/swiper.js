@@ -23,7 +23,8 @@
 			  swipePrev = document.createElement('button'),
 			  items = swipe.querySelectorAll('.swiper-slide'),
 			  count = items.length,
-			  card = swipe.classList.contains('swiper-container--card');
+			  card = swipe.classList.contains('swiper-container--card'),
+			  billboard = swipe.classList.contains('swiper-container--billboard');;
 
 		swipeNav.className = 'swiper-pagination';
 		swipeControls.className = 'swiper-controls';
@@ -66,6 +67,23 @@
 				new Swiper(swipe, {
 					loop: true,
 					slidesPerView: 'auto'
+				});
+
+			}
+
+		}
+
+		if (billboard) {
+
+			toggleSwipe = () => {
+
+				toggleSwipe = false;
+
+				new Swiper(swipe, {
+					loop: true,
+					autoplay: {
+						delay: 5000
+					}
 				});
 
 			}

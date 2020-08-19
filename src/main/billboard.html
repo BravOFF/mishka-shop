@@ -1,56 +1,31 @@
-	<aside class="billboard">
+{% set list = [
+	{
+		img: 1,
+		alt: "Топовые ноутбуки XIAOMI"
+	},
+	{
+		img: 2,
+		alt: "MI 9T PRO PREMIUM"
+	}
+] %}
+
+	<aside class="billboard swiper-container-style">
 
 		<div class="billboard__box">
 
-			<ul class="billboard__list">
+			<div class="swiper-container swiper-container--billboard">
 
-				<li class="billboard__item">
+				<ul class="billboard__list swiper-wrapper">
 
-					<a class="billboard__el" href="/">
+{% for item in list %}
 
-						<picture>
+{% include "main/billboard__item.html" %}
 
-							<source srcset="/img/billboard/1--724x350.webp 1x, /img/billboard/1--1448x700.webp 2x" type="image/webp" media="(mix-width: 425px)">
-							<source srcset="/img/billboard/1--724x350.jpg 1x, /img/billboard/1--1448x700.jpg 2x" media="(mix-width: 425px)">
+{% endfor %}
 
-							<source srcset="/img/billboard/1--394x190.webp 1x, /img/billboard/1--788x380.webp 2x" type="image/webp" media="(mix-width: 375px)">
-							<source srcset="/img/billboard/1--394x190.jpg 1x, /img/billboard/1--788x380.jpg 2x" media="(mix-width: 375px)">
+				</ul>
 
-							<source srcset="/img/billboard/1--330x160.webp 1x, /img/billboard/1--660x320.webp 2x" type="image/webp">
-							<source srcset="/img/billboard/1--330x160.jpg 1x, /img/billboard/1--660x320.jpg 2x">
-
-							<img src="/img/billboard/1--724x350.jpg" alt="" loading="lazy" width="330" height="160">
-
-						</picture>
-
-					</a>
-
-				</li>
-
-				<li class="billboard__item">
-
-					<a class="billboard__el" href="/">
-
-						<picture>
-
-							<source srcset="/img/billboard/2--724x350.webp 1x, /img/billboard/2--1448x700.webp 2x" type="image/webp" media="(mix-width: 425px)">
-							<source srcset="/img/billboard/2--724x350.jpg 1x, /img/billboard/2--1448x700.jpg 2x" media="(mix-width: 425px)">
-
-							<source srcset="/img/billboard/2--394x190.webp 1x, /img/billboard/2--788x380.webp 2x" type="image/webp" media="(mix-width: 375px)">
-							<source srcset="/img/billboard/2--394x190.jpg 1x, /img/billboard/2--788x380.jpg 2x" media="(mix-width: 375px)">
-
-							<source srcset="/img/billboard/2--330x160.webp 1x, /img/billboard/2--660x320.webp 2x" type="image/webp">
-							<source srcset="/img/billboard/2--330x160.jpg 1x, /img/billboard/2--660x320.jpg 2x">
-
-							<img src="/img/billboard/2--724x350.jpg" alt="" loading="lazy" width="330" height="160">
-
-						</picture>
-
-					</a>
-
-				</li>
-
-			</ul>
+			</div>
 
 		</div>
 
