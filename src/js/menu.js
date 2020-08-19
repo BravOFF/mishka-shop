@@ -1,4 +1,4 @@
-/*((menu) => {
+((menu) => {
 
 	"use strict";
 
@@ -8,42 +8,28 @@
 
 	}
 
-	const wrapper = document.querySelector('.wrapper');
-
-
 	// открыть|закрыть меню
 
-	document.addEventListener('click', (e) => {
+	document.querySelector('.btn-menu-toggle').addEventListener('click', () => {
 
-		if(e.target.closest('.btn-menu-toggle') || e.target.classList.contains('.menu')) {
+		if(document.body.classList.contains('menu-open')){
 
-			if(document.body.classList.contains('menu-open')){
-
-				setTimeout( () => {
-
-					window.scrollTo(0,MI.windowScrollOld);
-					wrapper.style.top = 0;
-
-				});
-
-			}
-			else {
-
-				MI.windowScrollOld = window.pageYOffset;
-				window.scrollTo(0,0);
-				wrapper.style.top = -MI.windowScrollOld + 'px';
-
-			}
-
-			document.body.classList.toggle('menu-open');
-			menu.classList.toggle('visuallyhidden');
+			setTimeout( () => window.scrollTo(0, MI.windowScrollOld));
 
 		}
+		else {
+
+			MI.windowScrollOld = window.pageYOffset;
+
+		}
+
+		document.body.classList.toggle('menu-open');
+		menu.classList.toggle('visuallyhidden');
 
 	});
 
 })(document.querySelector('.menu'));
-*/
+
 
 // меню каталога
 

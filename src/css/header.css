@@ -82,9 +82,9 @@
 
 	}
 
-}/*
+}
 
-.menu-show {
+.menu-open {
 
 	.main,
 	.footer {
@@ -93,20 +93,7 @@
 
 	}
 
-	.wrapper {
-
-		padding: 0 !important;
-
-	}
-
-	.header {
-
-		position: relative !important;
-		box-shadow: none;
-
-	}
-
-} */
+}
 
 .btn-menu-toggle {
 
@@ -146,7 +133,7 @@
 		content: '';
 
 	}
-/*
+
 	.menu-open & {
 
 		span {
@@ -169,7 +156,7 @@
 
 		}
 
-	} */
+	}
 
 }
 

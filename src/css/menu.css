@@ -1,5 +1,7 @@
 .menu {
 
+	padding: 25px 0 100px;
+
 	&__title {
 
 		margin-bottom: 12px;
@@ -60,31 +62,3 @@
 
 
 }
-/*
-.menu-open {
-
-	.wrapper {
-
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		overflow: hidden;
-		z-index: 1;
-
-		.main {
-
-			pointer-events: none;
-
-		}
-
-	}
-
-	.menu {
-
-		display: block;
-
-	}
-
-}*/
