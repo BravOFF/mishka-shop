@@ -13,6 +13,10 @@
 @import url(footer.css);
 @import url(social.css);
 
+@import url(pagin.css);
+@import url(article.css);
+@import url(breadcrumbs.css);
+
 @import url(search-shop.css);
 @import url(billboard.css);
 @import url(menu-catalog.css);
@@ -20,14 +24,13 @@
 @import url(card-preview.css);
 @import url(address-shops.css);
 
+@import url(catalog.css);
+
 /*
-@import url(surgeries.css);
-
-@import url(review.css);
-@import url(readme.css);
 
 
-@import url(contact.css);
+
+
 
 @import url(surgery.css);
 @import url(accordion.css);
