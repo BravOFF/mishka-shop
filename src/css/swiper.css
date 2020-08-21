@@ -14,14 +14,7 @@
 	position: relative;
 
 	.swiper-controls {
-/*
-		position: absolute;
-		top: 50%;
-		right: 0;
-		z-index: 5;
-		display: flex;
-		justify-content: space-between;
-		pointer-events: none; */
+
 
 	}
 
@@ -138,10 +131,6 @@
 		bottom: 0;
 		pointer-events: none;
 
-		@media ($smWidth) {
-
-		}
-
 	}
 
 	.swiper-button-prev,
@@ -152,9 +141,9 @@
 		pointer-events: auto;
 
 		border-radius: 50%;
-		width: 64px;
-		height: 64px;
-		background-color: rgba(255,255,255,.4);
+		width: 36px;
+		height: 36px;
+		background-color: #f7f7f7;
 
 		svg {
 
@@ -171,11 +160,11 @@
 		&.swiper-button-disabled {
 
 			pointer-events: none;
-			opacity: 0;
+			background-color: transparent;
 
 			svg {
 
-				opacity: 0.5;
+		/* 		opacity: 0.5; */
 
 			}
 
@@ -185,12 +174,13 @@
 
 	.swiper-button-prev {
 
-		transform: rotate(180deg);
+		left: 12px;
 
 	}
 
 	.swiper-button-next {
 
+		right: 12px;
 
 	}
 
@@ -200,27 +190,41 @@
 		transform: translate3d(0, 0, 0);
 		z-index: 10;
 		display: flex;
-		align-items: center;
 		justify-content: center;
 		position: relative;
-		display: none;
 		flex-grow: 1;
+		margin-top: 20px;
 
 		.button {
 
-			background-color: var(--text);
-			opacity: .2;
-			height: 6px;
-			width: 6px;
-			transition: .3s;
-			margin: 5px;
-			border-radius: 3px;
-			pointer-events: auto;
+			background-image: linear-gradient(to bottom, #ff763e, #d13d00);
+			width: 11px;
+			height: 11px;
+			margin: 3px;
+			border-radius: 50%;
+
+			&::after {
+
+				position: absolute;
+				top: 2px;
+				left: 2px;
+				right: 2px;
+				bottom: 2px;
+				content: '';
+				border-radius: 50%;
+				background-color: #fff;
+				opacity: 0;
+				transition: var(--transitionDefault);
+
+			}
 
 			&.is-active {
 
-				opacity: 1;
-				width: 20px;
+				&::after {
+
+					opacity: 1;
+
+				}
 
 			}
 

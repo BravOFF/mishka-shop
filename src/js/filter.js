@@ -12,17 +12,17 @@
 		  btnClose = filter.querySelectorAll('.filter-close'),
 		  btnRange = filter.querySelectorAll('.filter__range-item');
 
-	Array.prototype.forEach.call(btnOpen, (el) =>
+	Array.from(btnOpen, (el) =>
 		el.addEventListener('click', () =>
 			document.body.classList.add('filter-show')));
 
 
-	Array.prototype.forEach.call(btnClose, (el) =>
+	Array.from(btnClose, (el) =>
 		el.addEventListener('click', () =>
 			document.body.classList.remove('filter-show')));
 
 
-	Array.prototype.forEach.call(btnRange, (el) => {
+	Array.from(btnRange, (el) => {
 
 		const btn = el.querySelector('.filter__range-reset'),
 			  input = el.querySelector('.input');

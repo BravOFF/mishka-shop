@@ -25,9 +25,9 @@ self.addEventListener('fetch', function(event) {
         /admin/i.test(url.pathname) === false &&
         /browser-sync/i.test(url.pathname) === false &&
         (
-            /js/i.test(url.pathname) ||
+/*            /js/i.test(url.pathname) ||
             /css/i.test(url.pathname) ||
-            /img/i.test(url.pathname) ||
+            /img/i.test(url.pathname) ||*/
             /fonts/i.test(url.pathname)
         )
     ) {

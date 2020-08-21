@@ -1,4 +1,4 @@
-MI.mask = function(elems){
+MI.mask = (elems) => {
 
 	if(!elems.length) {
 
@@ -6,55 +6,35 @@ MI.mask = function(elems){
 
 	}
 
-	if (typeof Inputmask === 'undefined') {
+	if (!window.Inputmask) {
 
-		var script = document.createElement('script');
+		const script = document.createElement('script');
 
 		script.type = 'text/javascript';
 		script.async = true;
 		script.src ='/js/inputmask.min.js';
 
-		script.onload = function () {
+		script.onload = () => setMask();
 
-			Inputmask.extendDefaults({
-				oncomplete: function () {
-					/*console.log('complete');*/
-					this.classList.add('inputmask--complete');
-				},
-				onincomplete: function () {
-					/*console.log('incomplete');*/
-					this.classList.remove('inputmask--complete');
-				},
-				oncleared: function () {
-					/*console.log('cleared');*/
-				},
-				onKeyValidation: function(key, result){
-					/*console.log(key, result);*/
-				}
-			});
+		setTimeout( () => document.head.appendChild(script), 5000);
 
-			setMask();
-
-		};
-
-		document.head.appendChild(script);
-
-	} else {
+	}
+	else {
 
 		setMask();
 
 	}
 
-	function setMask() {
+	const setMask = () => {
 
-		Array.prototype.forEach.call(elems, function(el){
+		Array.from(elems, (el) => {
 
 			if(el.classList.contains('inputmask--phone')) {
 
 				var maskInput = new Inputmask({
-					mask: "+7 999 999 99 99",
+					mask: "+7 ( 999 ) 999-99-99",
 					showMaskOnHover: false,
-					placeholder: "+7 ___ ___ __ __"
+					placeholder: "+7 ( ___ ) ___-__-__"
 				});
 
 			}

@@ -45,6 +45,15 @@
 	border-radius: 5px;
 	background-color: var(--orange);
 
+	&--small {
+
+		height: 36px;
+		padding: 0 20px;
+		line-height: 36px;
+		font-size: 11px;
+
+	}
+
 	&--white {
 
 		color: var(--color);
@@ -56,6 +65,12 @@
 	&--black {
 
 		background-color: #2d3540;
+
+	}
+
+	&--gray {
+
+		background-color: var(--text);
 
 	}
 
@@ -136,6 +151,49 @@
 			}
 
 		}
+
+	}
+
+	&--link {
+
+		font-size: 16px;
+		line-height: 20px;
+		height: 20px;
+		padding: 0;
+		color: var(--color);
+		background-color: transparent;
+		border-bottom: 1px solid;
+		border-radius: 0;
+
+	}
+
+	&-like,
+	&-dislike {
+
+		height: 18px;
+		padding: 0;
+		line-height: 18px;
+		background-color: transparent;
+		background-size: 17px auto;
+		background-repeat: no-repeat;
+		background-position: left;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 16'%3E%3Cpath d='M16.7 9.57a1.55 1.55 0 00-.45-1.09 1.73 1.73 0 00.45-1.33 1.8 1.8 0 00-1.81-1.58h-4.3a10 10 0 00.55-2.78C11.13 1.27 9.85 0 9 0a2.18 2.18 0 00-1.22.42.35.35 0 00-.13.28v2.35l-2 4.34h-.08V7.3a.35.35 0 00-.35-.3H1.74A1.74 1.74 0 000 8.7v5.57A1.74 1.74 0 001.74 16h2.09a1.74 1.74 0 001.64-1.15 4.53 4.53 0 001.84.45h6.39a1.6 1.6 0 001.58-1.21 1.57 1.57 0 00-.13-1 1.56 1.56 0 00.7-2.09 1.56 1.56 0 00.85-1.43zm-1.47.86a.35.35 0 00-.2.6.86.86 0 01-.5 1.49.35.35 0 00-.2.6.86.86 0 01.25.83.9.9 0 01-.9.67H7.3A3.3 3.3 0 015.46 14a.35.35 0 00-.59.25 1 1 0 01-1 1H1.74a1 1 0 01-1-1V8.7a1 1 0 011-1h3.13V8a.35.35 0 00.13.3.36.36 0 00.34 0l.73-.3a.35.35 0 00.16-.16l2.09-4.56a.35.35 0 000-.15V.88A1.47 1.47 0 019 .7a2.3 2.3 0 011.39 2.09 10.83 10.83 0 01-.67 3 .35.35 0 00.32.47h4.79a1.1 1.1 0 011.17.95 1 1 0 01-.5 1 .35.35 0 000 .61.86.86 0 01-.29 1.63z' fill='%230ead43'/%3E%3C/svg%3E");
+
+		&::before {
+
+			content: attr(data-count);
+			font-size: 12px;
+			padding: 0 5px 0 20px;
+			display: block;
+			color: var(--color);
+
+		}
+
+	}
+
+	&-dislike {
+
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 16'%3E%3Cpath d='M0 6.43a1.55 1.55 0 00.45 1.1A1.73 1.73 0 000 8.86a1.8 1.8 0 001.81 1.58h4.3a10 10 0 00-.55 2.78C5.57 14.73 6.85 16 7.65 16a2.18 2.18 0 001.26-.42.35.35 0 00.09-.28v-2.35l2-4.34h.08v.09a.35.35 0 00.35.35H15a1.74 1.74 0 001.7-1.75V1.74A1.74 1.74 0 0015 0h-2.13a1.74 1.74 0 00-1.64 1.15A4.53 4.53 0 009.39.7H3a1.6 1.6 0 00-1.57 1.21 1.57 1.57 0 00.13 1A1.56 1.56 0 00.86 5 1.56 1.56 0 000 6.43zm1.47-.86a.35.35 0 00.2-.6.86.86 0 01.5-1.49.35.35 0 00.2-.6.86.86 0 01-.25-.83.9.9 0 01.88-.66h6.39a3.3 3.3 0 011.84.61.35.35 0 00.59-.25 1 1 0 011-1H15a1 1 0 011 1V7.3a1 1 0 01-1 1h-3.17V8a.35.35 0 00-.17-.3.36.36 0 00-.34 0l-.7.35a.35.35 0 00-.16.16l-2.08 4.51a.35.35 0 000 .15v2.25a1.47 1.47 0 01-.7.19 2.3 2.3 0 01-1.39-2.09 10.83 10.83 0 01.67-3 .35.35 0 00-.32-.47H1.82A1.1 1.1 0 01.7 8.79a1 1 0 01.5-1 .35.35 0 000-.61.86.86 0 01.29-1.63z' fill='%23ff4a00'/%3E%3C/svg%3E");
 
 	}
 
@@ -333,7 +391,6 @@
 
 .checkbox {
 
-
 	display: block;
 	position: relative;
 	font-size: 18px;
@@ -443,6 +500,102 @@
 		top: 0;
 		left: 0;
 		opacity: 0.00001;
+
+	}
+
+}
+
+.radio-btn {
+
+	display: block;
+	width: 100%;
+	position: relative;
+
+	&__input {
+
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		top: 0;
+		left: 0;
+		opacity: 0.001;
+		z-index: -1;
+
+	}
+
+	&__label {
+
+		display: block;
+		font-size: 18px;
+		font-weight: 700;
+		padding: 0 24px;
+		line-height: 50px;
+		border-radius: 5px;
+		border: 1px solid var(--text);
+
+	}
+
+	&__input:checked + &__label {
+
+		background-color: #303030;
+		color: #fff;
+		border-color: #303030;
+
+	}
+
+}
+
+
+.radio-color {
+
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+	position: relative;
+	border: 1px solid var(--text);
+
+	&__input {
+
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		top: 0;
+		left: 0;
+		opacity: 0.001;
+		z-index: -1;
+
+	}
+
+	&__label {
+
+		display: block;
+		font-size: 0;
+		color: transparent;
+		height: 26px;
+		width: 30px;
+		margin: 5px;
+		border-radius: 5px;
+
+	}
+
+	&__input:checked + &__label {
+
+		&::after {
+
+			width: 18px;
+			height: 18px;
+			position: absolute;
+			top: -6px;
+			right: -6px;
+			border-radius: 50%;
+			background-color: #fff;
+			content: '';
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M225.882 331.294a30.057 30.057 0 01-21.233-8.885l-45.176-45.176c-11.761-11.761-11.761-30.856 0-42.616s30.856-11.761 42.616 0l25.449 25.449 84.179-72.132c13.809-9.276 32.527-5.587 41.788 8.222 7.695 11.475 6.611 26.699-2.635 36.954l-105.412 90.353a30.141 30.141 0 01-19.576 7.831z' fill='%23ff4a00'/%3E%3Cpath d='M256 512C114.613 512 0 397.387 0 256S114.613 0 256 0s256 114.613 256 256-114.613 256-256 256zm0-451.765C147.878 60.235 60.235 147.878 60.235 256S147.878 451.765 256 451.765 451.765 364.122 451.765 256 364.122 60.235 256 60.235z' fill='%23ff4a00'/%3E%3C/svg%3E");
+
+		}
 
 	}
 
