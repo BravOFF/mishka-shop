@@ -10,6 +10,9 @@
 
 	const headerTop = header.querySelector('.header__top');
 
+	MI.headerHeight = headerTop.clientHeight;
+
 	PubSub.subscribe('windowScroll', () => headerTop.classList.toggle('is-scroll', window.pageYOffset > 0));
+	PubSub.subscribe('windowWidthResize', () => MI.headerHeight = headerTop.clientHeight);
 
 })(document.querySelector('.header'));

@@ -8,9 +8,28 @@
 
 	}
 
-	Array.prototype.forEach.call(slide, (elem) =>
-		elem.querySelector('.slide__btn').addEventListener('click', () =>
-			elem.classList.toggle('is-open')));
+	Array.from(slide, (elem) =>
+
+		elem.querySelector('.slide__btn').addEventListener('click', () => {
+
+			elem.classList.toggle('is-open');
+
+			setTimeout( () => {
+
+				if(elem.getBoundingClientRect().top - MI.headerHeight < 0 && elem.classList.contains('is-open')){
+
+					const top = elem.getBoundingClientRect().top - MI.headerHeight - parseInt(window.getComputedStyle(elem).marginTop) + window.pageYOffset;
+
+					window.scrollTo({
+						top: top,
+						behavior: 'smooth'
+					});
+
+				}
+
+			},100);
+
+		}));
 
 })(document.querySelectorAll('.slide'));
 
@@ -26,13 +45,13 @@
 
 	}
 
-	Array.prototype.forEach.call(accordion, (elem) => {
+	Array.from(accordion, (elem) => {
 
 		var active = null,
 			btns = elem.querySelectorAll('.accordion__btn'),
 			items = elem.querySelectorAll('.accordion__item');
 
-		Array.prototype.forEach.call(btns, (btn,index) => {
+		Array.from(btns, (btn,index) => {
 
 			btn.addEventListener('click', () => {
 
@@ -47,7 +66,7 @@
 
 					active = index;
 
-					Array.prototype.forEach.call(items, (el,_index) => {
+					Array.from(items, (el,_index) => {
 
 						if(active !== _index) {
 
