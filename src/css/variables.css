@@ -8,6 +8,7 @@
 	--bg: #fff;
 	--green: #0ead43;
 	--shadow: 0 5px 15px rgba(0,0,0,.05);
+	--shadowTop: 0 -5px 15px rgba(0,0,0,.05);
 	--transitionDefault: .3s;
 
 }

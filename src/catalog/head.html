@@ -10,13 +10,32 @@
 
 		<div class="catalog-head__btn">
 
-			<button class="catalog-head__filter btn btn--white filter-open" type="button">
-				Фильтр
-			</button>
+			<div class="catalog-head__filter">
 
-			<button class="catalog-head__sort btn btn--white" type="button">
-				По популярности
-			</button>
+				<button class="btn btn--white filter-open" type="button">
+					Фильтр
+				</button>
+
+			</div>
+
+			<form action="/" class="catalog-head__sort">
+
+				<div class="select">
+
+					<label class="select__label btn btn--white" for="catalog-sort">
+						По популярности
+					</label>
+
+					<select id="catalog-sort">
+						<option value="1">По популярности</option>
+						<option value="2">По алфавиту</option>
+						<option value="3">По цене возрастание</option>
+						<option value="4">По цене уменьшению</option>
+					</select>
+
+				</div>
+
+			</form>
 
 		</div>
 

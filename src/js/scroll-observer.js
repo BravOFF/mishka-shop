@@ -10,8 +10,7 @@
 			threshold: [.1]
 		};
 
-		const headerTop = document.querySelector('.header__top'),
-			  headerBottom = document.querySelector('.header__bottom');
+		const headerBottom = document.querySelector('.header__bottom');
 
 		const callback = (entries, observer) =>
 

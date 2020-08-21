@@ -12,9 +12,7 @@
 
 {% block content %}
 
-	<section class="center">
-
-{% include "catalog/filter.html" %}
+	<section class="center filter-show__hide">
 
 {% include "_include/search.html" %}
 {% include "_include/breadcrumbs.html" %}
@@ -24,5 +22,7 @@
 {% include "catalog/article.html" %}
 
 	</section>
+
+{% include "catalog/filter.html" %}
 
 {% endblock %}

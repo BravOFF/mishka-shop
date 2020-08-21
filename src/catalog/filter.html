@@ -1,148 +1,23 @@
 	<form class="filter" action="/">
 
-		<h3 class="h1 filter__title">
-			Фильтр
-		</h3>
+		<div class="filter__head">
 
-		<div class="filter__item accordion">
+			<div class="center">
 
-			<h4 class="filter__label">
+				<div class="filter__head-wrap">
 
-				<span class="accordion__btn">
-					Производитель
-				</span>
+					<h3 class="h1 filter__title">
+						Фильтр
+					</h3>
 
-			</h4>
-
-			<div class="accordion__body slide">
-
-				<hr>
-
-				<div class="filter__input">
-
-					<input placeholder="Поиск" class="input">
-
-				</div>
-
-				<div class="slide__body">
-
-					<div class="filter__radio">
-
-						<label class="checkbox-radio">
-
-							<input class="checkbox-radio__input" type="radio" name="vendor" checked="checked">
-
-							<span class="checkbox-radio__label">
-								Acer <small>164</small>
-							</span>
-
-						</label>
-
-					</div>
-
-					<div class="filter__radio">
-
-						<label class="checkbox-radio">
-
-							<input class="checkbox-radio__input" type="radio" name="vendor">
-
-							<span class="checkbox-radio__label">
-								Acer <small>164</small>
-							</span>
-
-						</label>
-
-					</div>
-
-					<div class="filter__radio">
-
-						<label class="checkbox-radio">
-
-							<input class="checkbox-radio__input" type="radio" name="vendor">
-
-							<span class="checkbox-radio__label">
-								Acer <small>164</small>
-							</span>
-
-						</label>
-
-					</div>
-
-					<div class="filter__radio">
-
-						<label class="checkbox-radio">
-
-							<input class="checkbox-radio__input" type="radio" name="vendor">
-
-							<span class="checkbox-radio__label">
-								Acer <small>164</small>
-							</span>
-
-						</label>
-
-					</div>
-
-					<div class="filter__radio">
-
-						<label class="checkbox-radio">
-
-							<input class="checkbox-radio__input" type="radio" name="vendor">
-
-							<span class="checkbox-radio__label">
-								Acer <small>164</small>
-							</span>
-
-						</label>
-
-					</div>
-
-					<div class="filter__radio">
-
-						<label class="checkbox-radio">
-
-							<input class="checkbox-radio__input" type="radio" name="vendor">
-
-							<span class="checkbox-radio__label">
-								Acer <small>164</small>
-							</span>
-
-						</label>
-
-					</div>
-
-				</div>
-
-				<button class="btn btn--readme-arrow slide__btn" type="button">
-					Показать всё
-				</button>
-
-			</div>
-
-		</div>
-
-		<div class="filter__item accordion">
-
-			<h4 class="filter__label">
-
-				<span class="accordion__btn">
-					Гарантия
-				</span>
-
-			</h4>
-
-			<div class="accordion__body">
-
-				<div class="filter__radio">
-
-					<label class="checkbox">
-
-						<input class="checkbox__input" type="radio" name="garanty">
-
-						<span class="checkbox__label">
-							2 года
-						</span>
-
-					</label>
+					<button class="button filter__close filter-close" type="button" aria-label="Закрыть фильтр">
+						<svg width="16" height="16" viewBox="0 0 16 16">
+							<g id="filter-close-svg">
+								<path d="M.82 16a.82.82 0 01-.58-1.41L14.59.24a.82.82 0 011.16 1.16L1.41 15.76a.83.83 0 01-.59.24z"/>
+								<path d="M15.18 16a.82.82 0 01-.58-.24L.24 1.41A.82.82 0 011.41.24l14.35 14.35a.82.82 0 01-.58 1.41z"/>
+							</g>
+						</svg>
+					</button>
 
 				</div>
 
@@ -150,47 +25,237 @@
 
 		</div>
 
-		<div class="filter__item accordion">
+		<div class="filter__body">
 
-			<h4 class="filter__label">
+			<div class="center">
 
-				<span class="accordion__btn">
-					Диагональ экрана
-				</span>
+				<div class="filter__item accordion">
 
-				<details class="button filter__label-ask">
+					<div class="accordion__item">
 
-					<summary>
-						Пояснение
-					</summary>
+						<div class="filter__label">
 
-					У LED-телевизоров существует 3 способа расположения диодов подсветки – Direct LED, Edge LED и OLED. В первом случае светодиоды находятся позади матрицы, во втором – по ее краям. OLED-технологии не нужна дополнительная подсветка.
+							<h4 class="accordion__btn h1">
+								Производитель
+							</h4>
 
-				</details>
+						</div>
 
-			</h4>
+						<div class="accordion__body slide">
 
-			<div class="accordion__body">
+							<hr>
 
-				<div class="filter__range">
+							<input placeholder="Поиск" class="input filter__input">
 
-					<div class="filter__range-item">
+							<div class="filter__fieldset">
 
-						<input type="tel" class="input" value="11">
+								<div class="slide__body slide__body--200">
 
-						<button class="button filter__range-reset" type="button">
-							Очистить
-						</button>
+									<div class="filter__radio">
+
+										<label class="checkbox-radio">
+
+											<input class="checkbox-radio__input" type="radio" name="vendor" checked="checked">
+
+											<span class="checkbox-radio__label">
+												Acer <small>(164)</small>
+											</span>
+
+										</label>
+
+									</div>
+
+									<div class="filter__radio">
+
+										<label class="checkbox-radio">
+
+											<input class="checkbox-radio__input" type="radio" name="vendor">
+
+											<span class="checkbox-radio__label">
+												Acer <small>(164)</small>
+											</span>
+
+										</label>
+
+									</div>
+
+									<div class="filter__radio">
+
+										<label class="checkbox-radio">
+
+											<input class="checkbox-radio__input" type="radio" name="vendor">
+
+											<span class="checkbox-radio__label">
+												Acer <small>(164)</small>
+											</span>
+
+										</label>
+
+									</div>
+
+									<div class="filter__radio">
+
+										<label class="checkbox-radio">
+
+											<input class="checkbox-radio__input" type="radio" name="vendor">
+
+											<span class="checkbox-radio__label">
+												Acer <small>(164)</small>
+											</span>
+
+										</label>
+
+									</div>
+
+									<div class="filter__radio">
+
+										<label class="checkbox-radio">
+
+											<input class="checkbox-radio__input" type="radio" name="vendor">
+
+											<span class="checkbox-radio__label">
+												Acer <small>(164)</small>
+											</span>
+
+										</label>
+
+									</div>
+
+									<div class="filter__radio">
+
+										<label class="checkbox-radio">
+
+											<input class="checkbox-radio__input" type="radio" name="vendor">
+
+											<span class="checkbox-radio__label">
+												Acer <small>(164)</small>
+											</span>
+
+										</label>
+
+									</div>
+
+								</div>
+
+								<button class="btn btn--readme-arrow slide__btn" type="button">
+									Показать всё
+								</button>
+
+							</div>
+
+						</div>
 
 					</div>
 
-					<div class="filter__range-item">
+				</div>
 
-						<input type="tel" class="input" value="11">
+				<div class="filter__item accordion">
 
-						<button class="button filter__range-reset" type="button">
-							Очистить
-						</button>
+					<div class="accordion__item">
+
+						<div class="filter__label">
+
+							<h4 class="accordion__btn h1">
+								Гарантия
+							</h4>
+
+						</div>
+
+						<div class="accordion__body">
+
+							<div class="filter__fieldset">
+
+								<div class="filter__checkbox">
+
+									<label class="checkbox">
+
+										<input class="checkbox__input" type="checkbox" checked="checked">
+
+										<span class="checkbox__label">
+											2 года
+										</span>
+
+									</label>
+
+								</div>
+
+								<div class="filter__checkbox">
+
+									<label class="checkbox">
+
+										<input class="checkbox__input" type="checkbox">
+
+										<span class="checkbox__label">
+											3 года
+										</span>
+
+									</label>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="filter__item accordion">
+
+					<div class="accordion__item">
+
+						<div class="filter__label">
+
+							<h4 class="accordion__btn h1">
+								Диагональ экрана
+							</h4>
+
+							<details class="ask">
+
+								<p class="ask__inner">
+									У LED-телевизоров существует 3 способа расположения диодов подсветки – Direct LED, Edge LED и OLED. В первом случае светодиоды находятся позади матрицы, во втором – по ее краям. OLED-технологии не нужна дополнительная подсветка.
+								</p>
+
+							</details>
+
+						</div>
+
+						<div class="accordion__body">
+
+							<div class="filter__fieldset">
+
+								<div class="filter__range">
+
+									<div class="filter__range-item">
+
+										<input type="tel" class="input" value="11">
+
+										<button class="button filter__range-reset" type="button" aria-label="Очистить">
+											<svg width="10" height="10" viewBox="0 0 16 16">
+												<use xlink:href="#filter-close-svg"/>
+											</svg>
+										</button>
+
+									</div>
+
+									<div class="filter__range-item">
+
+										<input type="tel" class="input" value="">
+
+										<button class="button filter__range-reset" type="button" aria-label="Очистить">
+											<svg width="10" height="10" viewBox="0 0 16 16">
+												<use xlink:href="#filter-close-svg"/>
+											</svg>
+										</button>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
 
 					</div>
 
@@ -202,18 +267,22 @@
 
 		<div class="filter__foot">
 
-			<button class="btn">
-				Применить
-			</button>
+			<div class="center">
 
-			<button class="btn btn--black" type="reset">
-				Сбросить
-			</button>
+				<div class="filter__foot-wrap">
+
+					<button class="btn">
+						Применить
+					</button>
+
+					<button class="btn btn--black" type="reset">
+						Сбросить
+					</button>
+
+				</div>
+
+			</div>
 
 		</div>
-
-		<button class="button filter__close filter-close" type="button" aria-label="Закрыть фильтр">
-			Закрыть
-		</button>
 
 	</form>

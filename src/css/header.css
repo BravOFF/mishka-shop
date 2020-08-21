@@ -9,6 +9,12 @@
 		z-index: 9;
 		background-color: var(--bg);
 
+		&.is-scroll {
+
+			box-shadow: var(--shadow);
+
+		}
+
 	}
 
 	&__bottom {
@@ -19,7 +25,7 @@
 		right: 0;
 		z-index: 9;
 		background-color: var(--bg);
-		box-shadow: var(--shadow);
+		box-shadow: var(--shadowTop);
 		transition: var(--transitionDefault);
 
 		&.is-hidden {

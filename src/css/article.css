@@ -21,6 +21,12 @@
 		max-height: 144px;
 		transition: var(--transitionDefault);
 
+		&--200 {
+
+			max-height: 200px;
+
+		}
+
 	}
 
 	&--toggle &__body::after {
@@ -47,15 +53,18 @@
 
 	}
 
-	&.is-open &__btn {
+	&.is-open:not(&--toggle) &__btn {
 
-		display: none;
+		opacity: 0;
+		height: 0;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		transition: var(--transitionDefault);
 
 	}
 
 	&--toggle.is-open &__btn {
-
-		display: block;
 
 		&[data-open] {
 
