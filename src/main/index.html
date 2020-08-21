@@ -2,6 +2,21 @@
 
 {% set description = "Наш фирменный магазин xiaomi в Москве, предлагает купить продукцию xiaomi со значительной экономией вашего времени и денежных средств. Доставка, гарантия" %}
 
+{% set preloadImage = [
+	{
+		media: "(min-width: 425px)",
+		img : "/img/billboard/1--1448x700.webp"
+	},
+	{
+		media: "(min-width: 375px) and (max-width: 424px)",
+		img : "/img/billboard/1--788x380.webp"
+	},
+	{
+		media: "(max-width: 374px)",
+		img : "/img/billboard/1--660x320.webp"
+	}
+] %}
+
 {% extends "template/base.html" %}
 
 {% block content %}

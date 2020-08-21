@@ -8,7 +8,12 @@
 
 	<link href="/css/styles.css" rel="preload" as="style">
 	<link href="/js/scripts.js" rel="preload" as="script">
+<!-- 	<link href="/fonts/roboto-condensed-v18-latin_cyrillic-ext_cyrillic-300.woff2" rel="preload" as="font">
+	<link href="/fonts/roboto-condensed-v18-latin_cyrillic-ext_cyrillic-700.woff2" rel="preload" as="font">
+	<link href="/fonts/roboto-condensed-v18-latin_cyrillic-ext_cyrillic-regular.woff2" rel="preload" as="font">
 	<link href="/js/swiper.min.js" rel="preload" as="script">
+	 -->
+	<link href="//mc.yandex.ru" rel="dns-prefetch">
 
 	<link href="/favicon.png" rel="apple-touch-icon-precomposed">
 
@@ -48,6 +53,12 @@
 			});
 		}*/
 	</script>
+
+{% for item in preloadImage %}
+
+	<link href="{{ item.img }}" rel="preload" as="image" media="{{ item.media }}">
+
+{% endfor %}
 
 </head>
 
