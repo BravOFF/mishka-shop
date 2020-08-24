@@ -8,7 +8,7 @@
 
 	}
 
-	Array.from(slide, (elem) =>
+	Array.from(slide, elem =>
 
 		elem.querySelector('.slide__btn').addEventListener('click', () => {
 
@@ -45,7 +45,7 @@
 
 	}
 
-	Array.from(accordion, (elem) => {
+	Array.from(accordion, elem => {
 
 		var active = null,
 			btns = elem.querySelectorAll('.accordion__btn'),

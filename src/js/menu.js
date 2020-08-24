@@ -48,11 +48,11 @@
 
 	// первый уровень
 
-	Array.prototype.forEach.call(level1, (el) => {
+	Array.from(level1, el => {
 
-		el.addEventListener('click', (e) => {
+		el.addEventListener('click', evt => {
 
-			e.preventDefault();
+			evt.preventDefault();
 
 			el.classList.toggle('is-open');
 
@@ -62,11 +62,11 @@
 
 	// второй уровень
 
-	Array.prototype.forEach.call(level2, (el) => {
+	Array.from(level2, el => {
 
-		el.querySelector('.nav__level2-link').addEventListener('click', (e) => {
+		el.querySelector('.nav__level2-link').addEventListener('click', evt => {
 
-			e.preventDefault();
+			evt.preventDefault();
 
 			el.classList.toggle('is-open');
 

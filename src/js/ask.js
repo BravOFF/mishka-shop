@@ -42,7 +42,7 @@
 
 	});
 
-	Array.from(ask, (el) => {
+	Array.from(ask, el => {
 
 		observer.observe(el, {
 
@@ -52,11 +52,11 @@
 
 	});
 
-	document.body.addEventListener('click', (e) => {
+	document.body.addEventListener('click', evt => {
 
-		Array.from(ask, (el) => {
+		Array.from(ask, el => {
 
-			if(e.target.closest('.ask') !== el){
+			if(evt.target.closest('.ask') !== el){
 
 				el.open = false;
 

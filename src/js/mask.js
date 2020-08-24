@@ -27,7 +27,7 @@ MI.mask = (elems) => {
 
 	const setMask = () => {
 
-		Array.from(elems, (el) => {
+		Array.from(elems, el => {
 
 			if(el.classList.contains('inputmask--phone')) {
 

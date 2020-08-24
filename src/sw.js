@@ -1,7 +1,8 @@
-const CACHE = 'cache-only-v3';
+const CACHE = 'cache-only-v4';
 
 // событие activate
 self.addEventListener('activate', evt => {
+  console.log('activate', CACHE);
   evt.waitUntil(
     caches.keys().then(keys => {
       return Promise.all(keys
@@ -13,7 +14,7 @@ self.addEventListener('activate', evt => {
 });
 
 // при событии fetch, мы используем кэш, и только потом обновляем его данным с сервера
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
   const method = event.request.method;
   console.log(CACHE);
@@ -31,6 +32,7 @@ self.addEventListener('fetch', function(event) {
             /fonts/i.test(url.pathname)
         )
     ) {
+    console.log(url.pathname);
 
     // Мы используем `respondWith()`, чтобы мгновенно ответить без ожидания ответа с сервера.
     event.respondWith(fromCache(event.request));
@@ -41,14 +43,14 @@ self.addEventListener('fetch', function(event) {
 
 });
 
-function fromCache(request) {
+const fromCache = request => {
     return caches.open(CACHE).then((cache) =>
         cache.match(request).then((matching) =>
             matching || Promise.reject('no-match')
         ));
 }
 
-function update(request) {
+const update = request => {
     return caches.open(CACHE).then((cache) =>
         fetch(request).then((response) =>
             cache.put(request, response)

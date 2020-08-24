@@ -14,9 +14,9 @@
 		wrapper = document.querySelector('.wrapper'),
 		windowScroll = window.pageYOffset;
 
-	modal.addEventListener('click', (e) => {
+	modal.addEventListener('click', evt => {
 
-		if(e.target.classList.contains('modal') || e.target.closest('.modal__close')){
+		if(evt.target.classList.contains('modal') || evt.target.closest('.modal__close')){
 
 			MI.hideModal();
 
@@ -34,7 +34,7 @@
 
 	};
 
-	MI.modalShow = (selector) => {
+	MI.modalShow = selector => {
 
 		if(!MI.activeModal){
 
@@ -46,7 +46,8 @@
 
 		MI.activeModal = modal.querySelector('.modal__item--' + selector);
 
-		Array.prototype.forEach.call(items, (el) => el.classList.toggle('visuallyhidden', el !== MI.activeModal));
+		Array.from(items, el =>
+			el.classList.toggle('visuallyhidden', el !== MI.activeModal));
 
 		document.body.classList.add('modal-show');
 		window.scrollTo(0,0);
@@ -55,6 +56,8 @@
 
 	};
 
-	Array.prototype.forEach.call(btns, (el) => el.addEventListener('click', () => MI.modalShow(el.getAttribute('data-modal'))));
+	Array.from(btns, el =>
+		el.addEventListener('click', () =>
+			MI.modalShow(el.getAttribute('data-modal'))));
 
 })(document.querySelector('.modal'));

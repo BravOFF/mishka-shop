@@ -47,11 +47,11 @@ https://github.com/htmlpluscss/
 	window.addEventListener("load", () => PubSub.publish('pageLoad'));
 
 	// обработчик анимаций
-	MI.cssAnimation = (a)=>{var b,c,d=document.createElement("cssanimation");switch(a){case'animation':b={"animation":"animationend","OAnimation":"oAnimationEnd","MozAnimation":"animationend","WebkitAnimation":"webkitAnimationEnd"};break;case'transition':b={"transition":"transitionend","OTransition":"oTransitionEnd","MozTransition":"transitionend","WebkitTransition":"webkitTransitionEnd"}}for(c in b)if(d.style[c]!==undefined)return b[c]};
+	MI.cssAnimation = a => {var b,c,d=document.createElement("cssanimation");switch(a){case'animation':b={"animation":"animationend","OAnimation":"oAnimationEnd","MozAnimation":"animationend","WebkitAnimation":"webkitAnimationEnd"};break;case'transition':b={"transition":"transitionend","OTransition":"oTransitionEnd","MozTransition":"transitionend","WebkitTransition":"webkitTransitionEnd"}}for(c in b)if(d.style[c]!==undefined)return b[c]};
 
 	// Determine if an element is in the visible viewport
-	MI.isInViewport = (element) => {
-		var rect = element.getBoundingClientRect();
+	MI.isInViewport = element => {
+		const rect = element.getBoundingClientRect();
 		return (rect.top >= 0 && rect.bottom <= window.innerHeight);
 	};
 

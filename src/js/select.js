@@ -8,7 +8,7 @@
 
 	}
 
-	Array.prototype.forEach.call(items, (el) => {
+	Array.from(items, el => {
 
 		const label = el.querySelector('.select__label'),
 			  select = el.querySelector('select');

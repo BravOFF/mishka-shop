@@ -11,12 +11,12 @@
 
 	}
 
-	Array.from(tabs, (tab) => {
+	Array.from(tabs, tab => {
 
 		const btns = tab.querySelectorAll('.tab-swiper__btn'),
 			  items = tab.querySelectorAll('.tab-swiper__item');
 
-		Array.from(btns, (btn) => {
+		Array.from(btns, btn => {
 
 			btn.addEventListener('click', () => {
 

@@ -14,7 +14,7 @@
 
 		const callback = (entries, observer) =>
 
-			Array.from(entries, (entry) => {
+			Array.from(entries, entry => {
 
 				document.body.classList.toggle('bg-footer', entry.intersectionRatio > 0.1 && window.pageYOffset > 0);
 

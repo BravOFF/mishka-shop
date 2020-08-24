@@ -10,7 +10,7 @@
 
 	let swiperInit = window.Swiper;
 
-	Array.from(swiperContainer, (swipe) => {
+	Array.from(swiperContainer, swipe => {
 
 		let mySwipe = null,
 			toggleSwipe = null,
@@ -44,7 +44,7 @@
 		swipe.parentNode.appendChild(swipeControls);
 
 		// eager
-		Array.from(swipe.querySelectorAll('[loading="lazy"]'), (img) => img.setAttribute('loading','eager'));
+		Array.from(swipe.querySelectorAll('[loading="lazy"]'), img => img.setAttribute('loading','eager'));
 
 		resetSwipe = () => {
 
@@ -132,7 +132,7 @@
 
 		}
 
-		PubSub.subscribe('windowWidthResize', function(){
+		PubSub.subscribe('windowWidthResize', () => {
 
 			if (window.Swiper && toggleSwipe) {
 
