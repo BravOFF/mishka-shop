@@ -2,7 +2,7 @@
 [build](http://mi.wndrbase.com/)
 
 ## support browsers:
-**Android >= 4.4**
+** ES6
 
 ### Working hours:
-15:00
+28:52
