@@ -46,6 +46,9 @@
 		// eager
 		Array.from(swipe.querySelectorAll('[loading="lazy"]'), img => img.setAttribute('loading','eager'));
 
+		// hide
+		Array.from(items, el => el.classList.remove('hide'));
+
 		resetSwipe = () => {
 
 			if(mySwipe) {
@@ -116,6 +119,10 @@
 
 		if (billboard) {
 
+			swipeBtns.classList.add('hide');
+			swipeNav.classList.remove('hide');
+			swipeControls.classList.remove('hide');
+
 			toggleSwipe = () => {
 
 				toggleSwipe = false;
@@ -125,6 +132,13 @@
 					preloadImages: false,
 					autoplay: {
 						delay: 5000
+					},
+					pagination: {
+						el: swipeNav,
+						clickable: true,
+						bulletElement: 'button',
+						bulletClass: 'button',
+						bulletActiveClass: 'is-active'
 					}
 				});
 
