@@ -12,6 +12,7 @@
 @import url(menu.css);
 @import url(footer.css);
 @import url(social.css);
+@import url(menu-catalog.css);
 
 @import url(pagin.css);
 @import url(article.css);
@@ -19,7 +20,7 @@
 
 @import url(search-shop.css);
 @import url(billboard.css);
-@import url(menu-catalog.css);
+@import url(main-catalog.css);
 @import url(card-swiper.css);
 @import url(card-preview.css);
 @import url(address-shops.css);

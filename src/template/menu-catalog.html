@@ -158,48 +158,65 @@
 
 ] %}
 
-<nav class="menu-catalog">
+<nav class="menu-catalog visuallyhidden">
 
-	<ul class="menu-catalog__list">
+	<div class="menu-catalog__header">
+
+		<h3 class="menu-catalog__current-category h1">
+			Каталог
+		</h3>
+
+		<button type="button" class="menu-catalog__back button hide" aria-label="На уровень назад">
+			<svg width="10" height="16" viewBox="0 0 10 16">
+				<path d="M3.16 8l6-6a.88.88 0 000-1.24l-.54-.5a.88.88 0 00-1.24 0L.26 7.38a.88.88 0 000 1.24l7.12 7.12a.88.88 0 001.24 0l.52-.52a.88.88 0 000-1.24z"/>
+			</svg>
+		</button>
+
+		<button type="button" class="menu-catalog__close button" aria-label="Закрыть меню каталога">
+			<svg width="16" height="16" viewBox="0 0 16 16">
+				<path d="M.82 16a.82.82 0 01-.58-1.41L14.59.24a.82.82 0 011.16 1.16L1.41 15.76a.83.83 0 01-.59.24z"/>
+				<path d="M15.18 16a.82.82 0 01-.58-.24L.24 1.41A.82.82 0 011.41.24l14.35 14.35a.82.82 0 01-.58 1.41z"/>
+			</svg>
+		</button>
+
+	</div>
+
+	<div class="menu-catalog__inner">
+
+		<ul class="menu-catalog__list">
 
 {% for item in nav %}
 
-		<li class="menu-catalog__item">
+			<li class="menu-catalog__item">
 
-			<a class="menu-catalog__head" href="/" title="{{ item.parent }}">
-				<span class="menu-catalog__head-ico">
-					{{ item.ico | safe }}
-				</span>
-				<span class="menu-catalog__head-text">
-					{{ item.parent }}
-				</span>
-			</a>
+				<a class="menu-catalog__head{% if item.category %} menu-catalog__head--arrow{% endif %}" href="/" title="{{ item.parent }}">
+					<span class="menu-catalog__head-ico">
+						{{ item.ico | safe }}
+					</span>
+					<span class="menu-catalog__head-text">
+						{{ item.parent }}
+					</span>
+				</a>
 
-			<div class="menu-catalog__level2">
+	{% if item.category %}
 
-{% for level2 in item.category %}
+				<div class="menu-catalog__level2">
 
-				<div class="menu-catalog__level2-list">
+		{% for level2 in item.category %}
 
-					<div class="menu-catalog__level2-item{% if level2.list %} menu-catalog__level2-item--parent{% endif %}">
+					<div class="menu-catalog__level2-item">
 
-						<a class="menu-catalog__level2-link" href="/" title="{{ level2.name }}">
+						<a class="menu-catalog__level2-link{% if level2.list %} menu-catalog__level2-link--arrow{% endif %}" href="/" title="{{ level2.name }}">
 							{{ level2.name }}
 						</a>
 
-
-
 					</div>
 
-<!-- {% if level2.list %}
-
-					<button type="button" class="button menu-catalog__level3-btn-back">
-						Назад
-					</button>
+			{% if level2.list %}
 
 					<ul class="menu-catalog__level3">
 
-{% for level3 in level2.list %}
+				{% for level3 in level2.list %}
 
 						<li class="menu-catalog__level3-item">
 
@@ -209,22 +226,24 @@
 
 						</li>
 
-{% endfor %}
+				{% endfor %}
 
 					</ul>
 
-{% endif %}
- -->
+			{% endif %}
+
+		{% endfor %}
+
 				</div>
 
-{% endfor %}
+	{% endif %}
 
-			</div>
-
-		</li>
+			</li>
 
 {% endfor %}
 
-	</ul>
+		</ul>
+
+	</div>
 
 </nav>
