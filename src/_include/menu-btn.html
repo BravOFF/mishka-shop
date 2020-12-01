@@ -1,0 +1,15 @@
+	<ul class="menu-btn">
+
+{% for item in menu %}
+
+		<li class="menu-btn__item">
+
+			<a class="menu-btn__link btn{% if item === title %} is-active{% endif %}" href="/">
+				{{ item }}
+			</a>
+
+		</li>
+
+{% endfor %}
+
+	</ul>

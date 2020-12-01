@@ -461,50 +461,6 @@
 
 }
 
-
-.select {
-
-	position: relative;
-	display: block;
-
-	&__label {
-
-		pointer-events: none;
-		display: block;
-		padding-right: 40px !important;
-
-		&::after {
-
-			position: absolute;
-			width: 8px;
-			height: 8px;
-			top: 0;
-			right: 18px;
-			bottom: 0;
-			content: '';
-			margin: auto;
-			transition: .3s;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 241 241'%3E%3Cpath d='M220.088 57.667l-99.671 99.695-99.671-99.707a12.147 12.147 0 00-17.191 0c-4.74 4.752-4.74 12.451 0 17.203l108.261 108.297c4.74 4.752 12.439 4.752 17.179 0L237.256 74.859c4.74-4.752 4.74-12.463 0-17.215-4.728-4.729-12.428-4.729-17.168.023z'/%3E%3C/svg%3E");
-
-		}
-
-	}
-
-	select {
-
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		opacity: 0.00001;
-
-	}
-
-}
-
 .radio-btn {
 
 	display: block;
@@ -594,6 +550,175 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M225.882 331.294a30.057 30.057 0 01-21.233-8.885l-45.176-45.176c-11.761-11.761-11.761-30.856 0-42.616s30.856-11.761 42.616 0l25.449 25.449 84.179-72.132c13.809-9.276 32.527-5.587 41.788 8.222 7.695 11.475 6.611 26.699-2.635 36.954l-105.412 90.353a30.141 30.141 0 01-19.576 7.831z' fill='%23ff4a00'/%3E%3Cpath d='M256 512C114.613 512 0 397.387 0 256S114.613 0 256 0s256 114.613 256 256-114.613 256-256 256zm0-451.765C147.878 60.235 60.235 147.878 60.235 256S147.878 451.765 256 451.765 451.765 364.122 451.765 256 364.122 60.235 256 60.235z' fill='%23ff4a00'/%3E%3C/svg%3E");
+
+		}
+
+	}
+
+}
+
+.input-box {
+
+	margin: 16px 0;
+
+	&__label {
+
+		font-size: 12px;
+		margin: 10px 0;
+		display: block;
+
+		&.is-required::after {
+
+			color: var(--orange);
+			content: '*';
+
+		}
+
+	}
+
+	&__input {
+
+		border: 1px solid var(--border);
+		border-radius: 5px;
+		height: 56px;
+		margin: 12px 0;
+		font-size: 18px;
+		padding: 15px 20px;
+		line-height: 26px;
+
+		&::placeholder {
+
+			font-size: 18px;
+
+		}
+
+		textarea& {
+
+			height: 128px;
+
+		}
+
+	}
+
+}
+
+.checkbox-mini {
+
+	display: block;
+	position: relative;
+	font-size: 12px;
+	line-height: 18px;
+
+	&__input {
+
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 0;
+		left: 0;
+		opacity: 0.001;
+		z-index: -1;
+		appearance: none;
+
+	}
+
+	&__label {
+
+		display: block;
+		padding-left: 25px;
+
+		&::before {
+
+			width: 16px;
+			height: 16px;
+			border-radius: 2px;
+			position: absolute;
+			background-color: #fff;
+			border: 1px solid var(--border);
+			top: 0;
+			left: 0;
+			content: '';
+
+		}
+
+		a {
+
+			text-decoration: underline;
+			color: var(--orange);
+
+		}
+
+	}
+
+	&__input[type="checkbox"]:checked + &__label::before {
+
+		background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 11.379l6.895-6.895 1.06 1.06L7.502 13.5 2.728 8.727l1.06-1.06 3.713 3.712z' fill='%237B4865' stroke='%237B4865'/%3E%3C/svg%3E");
+		background-position: center;
+		background-repeat: no-repeat;
+
+	}
+
+}
+
+.select-border {
+
+	position: relative;
+	display: block;
+
+	&::after {
+
+		position: absolute;
+		top: 22px;
+		right: 14px;
+		content: '';
+		pointer-events: none;
+		width: 11px;
+		height: 8px;
+		background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.303 4.977L9.428.852l1.179 1.178-5.304 5.303L0 2.03 1.178.852l4.125 4.125z' fill='gray'/%3E%3C/svg%3E");
+
+	}
+
+	select {
+
+		background-color: #fff;
+		position: relative;
+		display: block;
+		font-size: 18px;
+		font-family: inherit;
+		color: var(--color);
+		padding: 15px 30px 15px 20px;
+		width: 100%;
+		max-width: 100%;
+		border-radius: 5px;
+		border: 1px solid var(--border);
+		appearance: none;
+		line-height: 26px;
+		height: 56px;
+
+		&::-ms-expand {
+
+			display: none;
+
+		}
+
+		&:focus {
+
+			outline: none;
+
+		}
+
+	}
+
+	option {
+
+		font-size: 16px;
+		font-family: inherit;
+		color: var(--color);
+		line-height: 1.4;
+
+		&[value="none"] {
+
+			display: none;
 
 		}
 
