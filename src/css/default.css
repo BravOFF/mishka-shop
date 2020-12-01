@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
+/* color: red !important */
 }
 
 html {
@@ -107,8 +107,8 @@ table {
 
 	@media ($tablet) {
 
-		font-size: 36px;
-		line-height: 48px;
+		font-size: 26px;
+		line-height: 32px;
 
 	}
 
@@ -118,12 +118,27 @@ table {
 
 	font-weight: 700;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 20px;
 
 	@media ($tablet) {
 
-		font-size: 36px;
-		line-height: 48px;
+		font-size: 20px;
+		line-height: 24px;
+
+	}
+
+}
+
+.h3 {
+
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 16px;
+
+	@media ($tablet) {
+
+		font-size: 14px;
+		line-height: 18px;
 
 	}
 
@@ -158,6 +173,8 @@ nav {
 
 	flex-shrink: 0;
 	flex-grow: 1;
+/* background-image: url(/css/1.png); */
+background-position: center -111px;
 
 }
 
@@ -184,7 +201,7 @@ nav {
 
 }
 
-a[href="tel"],
+a[href^="tel"],
 .white-space-nowrap {
 
 	white-space: nowrap;

@@ -7,8 +7,8 @@
 .center {
 
 	margin: 0 auto;
-	width: 960px;
-	/* width: 320px; */
+	width: 320px;
+	width: 560px;
 	max-width: 100%;
 	position: relative;
 	padding: 0 15px;
@@ -32,6 +32,7 @@
 	.center {
 
 		padding: 0 20px;
+		width: 960px;
 
 	}
 
