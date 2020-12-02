@@ -99,3 +99,17 @@
 	}
 
 }
+
+
+.achtung {
+
+	color: #a9445b;
+	padding: 12px;
+	margin: 1em 0;
+	background-color: #f2dede;
+	font-size: 11px;
+	line-height: 18px;
+	box-shadow: var(--shadow);
+	border-radius: 6px;
+
+}

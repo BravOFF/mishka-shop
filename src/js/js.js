@@ -46,6 +46,16 @@ https://github.com/htmlpluscss/
 	window.addEventListener("DOMContentLoaded", () => PubSub.publish('DOMContentLoaded'));
 	window.addEventListener("load", () => PubSub.publish('pageLoad'));
 
+	// отделяем тысячи
+	MI.sepNumber = str => {
+		str = str.toString();
+		str = str.replace(/\s+/g,'');
+		return str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+	}
+
+	// склеиваем тысячи
+	MI.strToNumber = n => parseInt(n.replace(/\s+/g,''), 10);
+
 	// обработчик анимаций
 	MI.cssAnimation = a => {var b,c,d=document.createElement("cssanimation");switch(a){case'animation':b={"animation":"animationend","OAnimation":"oAnimationEnd","MozAnimation":"animationend","WebkitAnimation":"webkitAnimationEnd"};break;case'transition':b={"transition":"transitionend","OTransition":"oTransitionEnd","MozTransition":"transitionend","WebkitTransition":"webkitTransitionEnd"}}for(c in b)if(d.style[c]!==undefined)return b[c]};
 

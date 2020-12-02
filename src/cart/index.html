@@ -1,10 +1,8 @@
 {% set title = "Корзина" %}
 
-{% set ogImage = "img/cart/og.jpg" %}
-{% set ogImage236 = "img/cart/og-236.jpg" %}
 {% set urlPage = "cart" %}
 
-{% set breadcrumbs = ['Главная страница',title] %}
+{% set breadcrumbs = ['Главная страница','Содержимое корзины'] %}
 
 {% extends "template/base.html" %}
 
@@ -15,67 +13,257 @@
 {% include "_include/search.html" %}
 {% include "_include/breadcrumbs.html" %}
 
+
+		<h1 class="h1">
+			{{ title }}
+		</h1>
+
+		<p class="achtung">
+			1 монета = 1 рублю; <br>бонусы начисляются когда заказ выполнен или оплачен <br>Бонусы не начисляются в случае, если текущий заказ оплачивается имеющимися монетами <br>Количество бонусов и свой статус можно посмотреть в личном кабинете.
+		</p>
+
+		<form action="/" class="cart">
+
+			<div class="menu-btn menu-btn--table-4">
+
+				<div class="menu-btn__item">
+
+					<button class="menu-btn__link btn is-active">
+						Оформить заказ
+					</button>
+
+				</div>
+
+				<div class="menu-btn__item">
+
+					<a href="/" class="menu-btn__link btn">
+						Продолжить покупки
+					</a>
+
+				</div>
+
+				<div class="menu-btn__item">
+
+					<button type="button" class="menu-btn__link btn">
+						Очистить корзину
+					</button>
+
+				</div>
+
+			</div>
+
+			<div class="cart__item">
+
+				<div class="cart__item-box">
+
+					<a href="/" class="cart__item-img">
+
+						<picture>
+
+							<source srcset="/img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--120x120.webp 1x, /img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--240x240.webp 2x" type="image/webp">
+							<source srcset="/img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--120x120.jpg 1x, /img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--240x240.jpg 2x">
+
+							<img src="/img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--120x120.jpg" alt="Xiaomi Redmi Note 7 6/64GB Twilight Gold" loading="lazy" width="120" height="120">
+
+						</picture>
+
+					</a>
+
+					<div class="cart__item-content">
+
+						<a href="/" class="cart__item-title">
+							Смартфон Xiaomi Redmi Note 9Pro 128GB/6GB Gray (Серый)
+						</a>
+
+						<div class="cart__item-quantity">
+
+							<span class="quantity">
+
+								<button class="quantity__btn quantity__btn--down button" type="button" aria-label="уменьшить количество на одну штуку"></button>
+
+								<input type="tel" value="2" class="quantity__count input" maxlength="3">
+
+								<input type="hidden" value="363" class="quantity__id">
+								<input type="hidden" value="10000" class="quantity__price">
+
+								<button class="quantity__btn quantity__btn--up button" type="button" aria-label="увеличить количество на одну штуку"></button>
+
+							</span>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<table class="cart__item-data">
+
+					<tr>
+
+						<th>
+							Наличие
+						</th>
+
+						<td>
+							<span class="cart__item-availability">
+								В наличии
+							</span>
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<th class="cart__item-key">
+							Стоимость
+						</th>
+
+						<td>
+							10 000 р.
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<th class="cart__item-key">
+							Сумма
+						</th>
+
+						<td>
+							<b><span class="cart__item-price cart__item-price--total">20 000</span> р.</b>
+						</td>
+
+					</tr>
+
+				</table>
+
+				<hr>
+
+				<button class="btn btn--remove cart__item-remove" type="button">
+					<svg width="20" height="20" viewBox="0 0 512 512">
+						<path d="M424 64h-88V48a48 48 0 00-48-48h-64a48 48 0 00-48 48v16H88a40 40 0 00-40 40v32a16 16 0 0016 16h384a16 16 0 0016-16v-32a40 40 0 00-40-40zM208 48c0-8.82 7.18-16 16-16h64c8.82 0 16 7.18 16 16v16h-96zM78.36 184a5 5 0 00-4.99 5.24l13.2 277.04A47.94 47.94 0 00134.51 512h242.98a47.94 47.94 0 0047.94-45.72l13.2-277.04a5 5 0 00-5-5.24zM320 224a16 16 0 1132 0v208a16 16 0 11-32 0zm-80 0a16 16 0 1132 0v208a16 16 0 11-32 0zm-80 0a16 16 0 1132 0v208a16 16 0 11-32 0z"/>
+					</svg>
+					Удалить
+				</button>
+
+			</div>
+
+			<div class="cart__item">
+
+				<div class="cart__item-box">
+
+					<a href="/" class="cart__item-img">
+
+						<picture>
+
+							<source srcset="/img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--120x120.webp 1x, /img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--240x240.webp 2x" type="image/webp">
+							<source srcset="/img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--120x120.jpg 1x, /img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--240x240.jpg 2x">
+
+							<img src="/img/card-preview/f9210dbaaf7b338e6d8d2bdbdba84b96--120x120.jpg" alt="Xiaomi Redmi Note 7 6/64GB Twilight Gold" loading="lazy" width="120" height="120">
+
+						</picture>
+
+					</a>
+
+					<div class="cart__item-content">
+
+						<a href="/" class="cart__item-title">
+							Смартфон Xiaomi Redmi Note 9Pro 128GB/6GB Gray (Серый)
+						</a>
+
+						<div class="cart__item-quantity">
+
+							<span class="quantity">
+
+								<button class="quantity__btn quantity__btn--down button" type="button" aria-label="уменьшить количество на одну штуку"></button>
+
+								<input type="tel" value="1" class="quantity__count input" maxlength="3">
+
+								<input type="hidden" value="364" class="quantity__id">
+								<input type="hidden" value="19290" class="quantity__price">
+
+								<button class="quantity__btn quantity__btn--up button" type="button" aria-label="увеличить количество на одну штуку"></button>
+
+							</span>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<table class="cart__item-data">
+
+					<tr>
+
+						<th>
+							Наличие
+						</th>
+
+						<td>
+							<span class="cart__item-availability">
+								В наличии
+							</span>
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<th class="cart__item-key">
+							Стоимость
+						</th>
+
+						<td>
+							19 290 р.
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<th class="cart__item-key">
+							Сумма
+						</th>
+
+						<td>
+							<b><span class="cart__item-price cart__item-price--total">19 290</span> р.</b>
+						</td>
+
+					</tr>
+
+				</table>
+
+				<hr>
+
+				<button class="btn btn--remove cart__item-remove" type="button">
+					<svg width="20" height="20" viewBox="0 0 512 512">
+						<path d="M424 64h-88V48a48 48 0 00-48-48h-64a48 48 0 00-48 48v16H88a40 40 0 00-40 40v32a16 16 0 0016 16h384a16 16 0 0016-16v-32a40 40 0 00-40-40zM208 48c0-8.82 7.18-16 16-16h64c8.82 0 16 7.18 16 16v16h-96zM78.36 184a5 5 0 00-4.99 5.24l13.2 277.04A47.94 47.94 0 00134.51 512h242.98a47.94 47.94 0 0047.94-45.72l13.2-277.04a5 5 0 00-5-5.24zM320 224a16 16 0 1132 0v208a16 16 0 11-32 0zm-80 0a16 16 0 1132 0v208a16 16 0 11-32 0zm-80 0a16 16 0 1132 0v208a16 16 0 11-32 0z"/>
+					</svg>
+					Удалить
+				</button>
+
+			</div>
+
+			<div class="cart__next">
+
+				<p class="h1">
+					Всего товаров: <span class="cart__total-items">2</span>
+				</p>
+
+				<p class="h1">
+					Сумма заказа: <span class="cart__total">19 290</span> р.
+				</p>
+
+				<button class="btn cart__btn">
+					Оформить заказ
+				</button>
+
+			</div>
+
+		</form>
+
 	</section>
 
 {% endblock %}
-
-
-Главная страница / Личный кабинет /
-Содержимое корзины
-
-
-
-
-
-1 монета = 1 рублю;
-бонусы начисляются когда заказ выполнен или оплачен
-Бонусы не начисляются в случае, если текущий заказ оплачивается имеющимися монетами
-Количество бонусов и свой статус можно посмотреть в личном кабинете.
-
-
-
-
-Оформить заказ
-
-
-Продолжить покупки
-
-
-
-Очистить корзину
-
-
-
-
-
-
-Смартфон Xiaomi Redmi Note 9Pro 128GB/6GB Gray (Серый)
-
-1
-
-
-
-
-
-Наличие
-Стоимость
-Сумма
-
-
-
-
-В наличии
-
-19 290 р.
-19 290 р.
-
-
-
-
-Удалить
-
-
-
-Всего товаров: 1Сумма заказа: 19 290 р.
-
-Оформить заказ
