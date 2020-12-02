@@ -17,10 +17,21 @@
 
 	}
 
+	&--table-4 &__item {
+
+		@media ($tablet) {
+
+			width: calc(100% / 4 - 10px);
+
+		}
+
+	}
+
 	&__link {
 
 		padding: 12px;
 		height: 52px;
+		width: 100%;
 		font-size: 12px;
 		line-height: 1;
 		white-space: normal;

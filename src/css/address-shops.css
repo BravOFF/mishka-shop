@@ -74,11 +74,14 @@
 			display: block;
 			margin-bottom: 2px;
 
+			& ~ b {
+
+				margin-top: 10px;
+
+			}
+
 		}
 
 	}
-
-
-
 
 }

@@ -1,9 +1,7 @@
 
 // tab-swiper
 
-((tabs)=>{
-
-	"use strict";
+( tabs =>{
 
 	if(!tabs.length) {
 
