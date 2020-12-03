@@ -1,5 +1,11 @@
 ( form => {
 
+	if(!form) {
+
+		return;
+
+	}
+
 	const quantity = form.querySelectorAll('.quantity'),
 		  totalText = form.querySelector('.cart__total'),
 		  totalCountItemText = form.querySelector('.cart__total-items');

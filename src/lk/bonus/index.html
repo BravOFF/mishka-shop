@@ -1,12 +1,6 @@
 {% set title = "Мишкины монеты" %}
 
-{% set description = "В зависимости от суммы заказов на сайте Mishka-Shop, участники клуба получают разный статус. Чем выше статус — тем больше привилегий." %}
-
-{% set ogImage = "img/money/og.jpg" %}
-{% set ogImage236 = "img/money/og-236.jpg" %}
-{% set urlPage = "money" %}
-
-{% set breadcrumbs = ['Главная страница',title] %}
+{% set breadcrumbs = ['Главная страница','Личный кабинет',title] %}
 
 {% extends "template/base.html" %}
 
@@ -16,6 +10,10 @@
 
 {% include "_include/search.html" %}
 {% include "_include/breadcrumbs.html" %}
+
+		<h1 class="h1">
+			{{ title }}
+		</h1>
 
 	</section>
 

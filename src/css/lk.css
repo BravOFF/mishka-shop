@@ -1,0 +1,165 @@
+.lk {
+
+	.h1:not(:first-child) {
+
+		margin-top: 30px;
+
+	}
+
+	&__head {
+
+		font-size: 14px;
+		line-height: 18px;
+		margin: 6px 0;
+		font-weight: 700;
+		display: block;
+
+	}
+
+	&__back {
+
+		margin: 20px 0;
+		padding: 10px 14px;
+		box-shadow: var(--shadow);
+		font-size: 12px;
+		border-radius: 6px;
+		display: flex;
+		align-items: center;
+
+		svg {
+
+			margin-right: 10px;
+
+		}
+
+	}
+
+	&__black {
+
+		background-color: #2d3540;
+		color: #fff;
+		font-size: 16px;
+		line-height: 1.5;
+		padding: 12px 20px;
+		margin: 20px 0;
+		border-radius: 6px;
+
+	}
+
+	&__history {
+
+		margin: 20px 0;
+		padding: 10px 20px;
+		box-shadow: var(--shadow);
+		border-radius: 6px;
+
+		&.is-black {
+
+			box-shadow: none;
+			background-color: #2d3540;
+			color: #fff;
+
+			th {
+
+				color: inherit;
+
+			}
+
+		}
+
+		th, td {
+
+			font-size: 12px;
+			line-height: 1.5;
+			height: 30px;
+			padding: 4px 20px;
+			vertical-align: top;
+
+			small {
+
+				display: block;
+				font-size: 10px;
+				color: var(--color);
+
+			}
+
+			&:first-child {
+
+				padding-left: 0;
+
+			}
+
+			&:last-child {
+
+				padding-right: 0;
+
+			}
+
+		}
+
+		th {
+
+			text-align: left;
+			font-weight: 400;
+			color: #c1c1c1;
+
+		}
+
+	}
+
+	&__btn-flex {
+
+		display: flex;
+		margin: 10px 0;
+
+		.btn {
+
+			min-width: 140px;
+			font-size: 12px;
+
+		}
+
+		.btn--readme {
+
+			color: var(--orange);
+			border-width: 2px;
+			height: 20px;
+			min-width: 0;
+			font-size: 14px;
+
+		}
+
+	}
+
+	&__paymend {
+
+		margin: 20px 0;
+		padding: 14px 20px;
+		box-shadow: var(--shadow);
+		border-radius: 6px;
+		font-size: 14px;
+		line-height: 1.5;
+
+		hr {
+
+			margin: 14px -20px;
+			background-color: #c1c1c1;
+
+		}
+
+
+	}
+
+	&__card {
+
+		margin: 20px 0;
+		padding: 14px 20px;
+		box-shadow: var(--shadow);
+		border-radius: 6px;
+		font-size: 12px;
+		line-height: 21px;
+
+	}
+
+
+}
