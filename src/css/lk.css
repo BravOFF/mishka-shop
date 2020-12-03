@@ -1,5 +1,98 @@
 .lk {
 
+/* bonus */
+
+	&__bonus {
+
+		margin: 20px 0;
+		padding: 0;
+		box-shadow: var(--shadow);
+		border-radius: 6px;
+
+		table {
+
+			width: 100%;
+
+		}
+
+		th, td {
+
+			font-size: 12px;
+			vertical-align: middle;
+			font-weight: 700;
+			padding: 12px 14px;
+			border-top: 1px solid #e8e8e8;
+		}
+
+		tr:first-child {
+
+			th, td {
+
+				border-top: 0;
+
+			}
+
+		}
+
+		th {
+
+			text-align: left;
+			font-weight: 400;
+			white-space: nowrap;
+
+			svg {
+
+				margin-right: 4px;
+				display: inline;
+				vertical-align: middle;
+
+			}
+
+		}
+
+		&-foot {
+
+			background-color: var(--orange);
+			color: #fff;
+			border-radius: 0 0 6px 6px;
+			padding: 14px 20px;
+			font-size: 14px;
+			font-weight: 700;
+			display: block;
+
+		}
+
+	}
+
+/* меню */
+
+	&-menu {
+
+		margin: 20px 0;
+		padding: 10px 0;
+		box-shadow: var(--shadow);
+		border-radius: 6px;
+
+		a {
+
+			display: block;
+			font-size: 12px;
+			line-height: 16px;
+			padding: 10px 20px;
+
+			&.is-active {
+
+				background-color: var(--orange);
+				color: #fff;
+
+			}
+
+		}
+
+	}
+
+/* заказ */
+
 	.h1:not(:first-child) {
 
 		margin-top: 30px;
