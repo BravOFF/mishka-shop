@@ -69,9 +69,10 @@
 	&-menu {
 
 		margin: 20px 0;
-		padding: 10px 0;
+		padding: 0;
 		box-shadow: var(--shadow);
 		border-radius: 6px;
+		overflow: hidden;
 
 		a {
 
@@ -198,6 +199,45 @@
 
 		}
 
+		hr {
+
+			margin: 14px -20px;
+			background-color: #c1c1c1;
+
+		}
+
+		&-foot {
+
+			font-size: 14px;
+			font-weight: 700;
+			display: flex;
+			justify-content: space-between;
+			padding: 5px 0 10px;
+
+			a {
+
+				color: var(--orange);
+				padding: 5px;
+				margin: -5px;
+
+			}
+
+		}
+
+		&-center-btn-ico {
+
+			display: flex;
+			justify-content: center;
+			padding-bottom: 5px;
+
+			svg {
+
+				margin: 4px;
+
+			}
+
+		}
+
 	}
 
 	&__btn-flex {
@@ -239,7 +279,6 @@
 			background-color: #c1c1c1;
 
 		}
-
 
 	}
 
