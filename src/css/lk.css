@@ -140,7 +140,7 @@
 
 	}
 
-	&__history {
+	&__data {
 
 		margin: 20px 0;
 		padding: 10px 20px;
@@ -206,7 +206,7 @@
 
 		}
 
-		&-foot {
+		&-foot-2link {
 
 			font-size: 14px;
 			font-weight: 700;
@@ -292,6 +292,5 @@
 		line-height: 21px;
 
 	}
-
 
 }
